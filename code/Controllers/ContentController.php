@@ -291,16 +291,6 @@ class ContentController extends Controller
     }
 
     /**
-     * @return ArrayList<SiteTree>
-     * @deprecated 5.4.0 Use getMenu() instead. You can continue to use $Menu in templates.
-     */
-    public function Menu($level)
-    {
-        Deprecation::noticeWithNoReplacment('5.4.0', 'Use getMenu() instead. You can continue to use $Menu in templates.');
-        return $this->getMenu($level);
-    }
-
-    /**
      * Returns the default log-in form.
      *
      * @return \SilverStripe\Security\MemberAuthenticator\MemberLoginForm
@@ -416,23 +406,23 @@ HTML;
         $action = $action === 'index' ? '' : '_' . $action;
 
         $templatesFound = [];
-        // Find templates for the record + action together - e.g. Page_action.ss
+        // Find templates for the record + action together - e.g. Page_action
         if ($this->dataRecord instanceof SiteTree) {
             $templatesFound[] = $this->dataRecord->getViewerTemplates($action);
         }
 
-        // Find templates for the controller + action together - e.g. PageController_action.ss
-        $templatesFound[] = SSViewer::get_templates_by_class(static::class, $action, Controller::class);
+        // Find templates for the controller + action together - e.g. PageController_action
+        $templatesFound[] = SSViewer::get_templates_by_class(static::class, $action ?? '', Controller::class);
 
-        // Find templates for the record without an action - e.g. Page.ss
+        // Find templates for the record without an action - e.g. Page
         if ($this->dataRecord instanceof SiteTree) {
             $templatesFound[] = $this->dataRecord->getViewerTemplates();
         }
 
-        // Find the templates for the controller without an action - e.g. PageController.ss
-        $templatesFound[] = SSViewer::get_templates_by_class(static::class, "", Controller::class);
+        // Find the templates for the controller without an action - e.g. PageController
+        $templatesFound[] = SSViewer::get_templates_by_class(static::class, '', Controller::class);
 
         $templates = array_merge(...$templatesFound);
-        return SSViewer::create($templates);
+        return SSViewer::create($templates, $this->getTemplateEngine());
     }
 }
