@@ -1763,10 +1763,6 @@ class SiteTreeTest extends SapphireTest
             $actions->fieldByName('ActionMenus.MoreOptions.action_archive'),
             'archive action present for a saved draft page'
         );
-        $this->assertNotNull(
-            $actions->fieldByName('ActionMenus.MoreOptions.action_addtocampaign'),
-            'addtocampaign action present for a saved draft page'
-        );
         $this->assertNull(
             $actions->fieldByName('ActionMenus.MoreOptions.action_unpublish'),
             'no unpublish action present for a saved draft page'
@@ -1800,10 +1796,6 @@ class SiteTreeTest extends SapphireTest
             $actions->fieldByName('ActionMenus.MoreOptions.action_unpublish'),
             'no unpublish action present for a published page'
         );
-        $this->assertNotNull(
-            $actions->fieldByName('ActionMenus.MoreOptions.action_addtocampaign'),
-            'addtocampaign action present for a published page'
-        );
         $this->assertNull(
             $actions->fieldByName('MajorActions.action_restore'),
             'no restore action present for a published page'
@@ -1831,10 +1823,6 @@ class SiteTreeTest extends SapphireTest
             $actions->fieldByName('ActionMenus.MoreOptions.action_rollback'),
             'rollback action present for a changed published page'
         );
-        $this->assertNotNull(
-            $actions->fieldByName('ActionMenus.MoreOptions.action_addtocampaign'),
-            'addtocampaign action present for a changed published page'
-        );
         $this->assertNull(
             $actions->fieldByName('MajorActions.action_restore'),
             'no restore action present for a changed published page'
@@ -1860,10 +1848,6 @@ class SiteTreeTest extends SapphireTest
         $this->assertNull(
             $actions->fieldByName('ActionMenus.MoreOptions.action_rollback'),
             'no rollback action present for a archived page'
-        );
-        $this->assertNull(
-            $actions->fieldByName('ActionMenus.MoreOptions.action_addtocampaign'),
-            'no addtocampaign action present for a archived page'
         );
         $this->assertNotNull(
             $actions->fieldByName('MajorActions.action_restore'),
@@ -1894,10 +1878,6 @@ class SiteTreeTest extends SapphireTest
             $actions->fieldByName('ActionMenus.MoreOptions.action_archive')->getForm(),
             'archive action has no form when page is draft'
         );
-        $this->assertEmpty(
-            $actions->fieldByName('ActionMenus.MoreOptions.action_addtocampaign')->getForm(),
-            'addtocampaign action has no form when page is draft'
-        );
         // END DRAFT
 
         // BEGIN PUBLISHED
@@ -1907,10 +1887,6 @@ class SiteTreeTest extends SapphireTest
         $this->assertEmpty(
             $actions->fieldByName('ActionMenus.MoreOptions.action_rollback')->getForm(),
             'rollback action has no form when page is published'
-        );
-        $this->assertEmpty(
-            $actions->fieldByName('ActionMenus.MoreOptions.action_addtocampaign')->getForm(),
-            'addtocampaign action has no form when page is published'
         );
         // END PUBLISHED
 
@@ -1934,10 +1910,6 @@ class SiteTreeTest extends SapphireTest
         $this->assertEmpty(
             $actions->fieldByName('ActionMenus.MoreOptions.action_rollback')->getForm(),
             'rollback action has no form when page is draft after published'
-        );
-        $this->assertEmpty(
-            $actions->fieldByName('ActionMenus.MoreOptions.action_addtocampaign')->getForm(),
-            'addtocampaign action has no form when page is draft after published'
         );
         // END DRAFT AFTER PUBLISHED
 
