@@ -13,6 +13,7 @@ use SilverStripe\Forms\Form;
 use SilverStripe\ORM\ArrayLib;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\ORM\ValidationResult;
+use SilverStripe\Dev\Deprecation;
 
 /**
  * @package cms
@@ -53,9 +54,12 @@ class CMSPageEditController extends CMSMain
 
     /**
      * Action handler for adding pages to a campaign
+     *
+     * @deprecated 5.4.0 Will be removed without equivalent functionality to replace it
      */
     public function addtocampaign(array $data, Form $form): HTTPResponse
     {
+        Deprecation::noticeWithNoReplacment('5.4.0');
         $id = $data['ID'];
         $record = \Page::get()->byID($id);
 
@@ -81,9 +85,11 @@ class CMSPageEditController extends CMSMain
      *
      * @param HTTPRequest $request
      * @return Form
+     * @deprecated 5.4.0 Will be removed without equivalent functionality to replace it
      */
     public function AddToCampaignForm($request)
     {
+        Deprecation::noticeWithNoReplacment('5.4.0');
         // Get ID either from posted back value, or url parameter
         $id = $request->param('ID') ?: $request->postVar('ID');
         return $this->getAddToCampaignForm($id);
@@ -92,9 +98,11 @@ class CMSPageEditController extends CMSMain
     /**
      * @param int $id
      * @return Form
+     * @deprecated 5.4.0 Will be removed without equivalent functionality to replace it
      */
     public function getAddToCampaignForm($id)
     {
+        Deprecation::noticeWithNoReplacment('5.4.0');
         // Get record-specific fields
         $record = SiteTree::get()->byID($id);
 
