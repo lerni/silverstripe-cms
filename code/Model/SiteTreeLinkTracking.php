@@ -79,7 +79,7 @@ class SiteTreeLinkTracking extends Extension
      * @param SiteTreeLinkTracking_Parser $parser
      * @return $this
      */
-    public function setParser(SiteTreeLinkTracking_Parser $parser = null)
+    public function setParser(?SiteTreeLinkTracking_Parser $parser = null)
     {
         $this->parser = $parser;
         return $this;
