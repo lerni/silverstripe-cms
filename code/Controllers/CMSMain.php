@@ -1481,28 +1481,9 @@ class CMSMain extends LeftAndMain implements CurrentPageIdentifier, PermissionPr
 
         // Get the IDs of all changeset including at least one of the pages.
         $descendants[] = $record->ID;
-        $inChangeSetIDs = ChangeSetItem::get()->filter([
-            'ObjectID' => $descendants,
-            'ObjectClass' => SiteTree::class
-        ])->column('ChangeSetID');
 
-        // Count number of affected change set
-        $affectedChangeSetCount = 0;
-        if (count($inChangeSetIDs ?? []) > 0) {
-            $affectedChangeSetCount = ChangeSet::get()
-                ->filter(['ID' => $inChangeSetIDs, 'State' => ChangeSet::STATE_OPEN])
-                ->count();
-        }
-
-        $numCampaigns = ChangeSet::singleton()->i18n_pluralise($affectedChangeSetCount);
-        $numCampaigns = mb_strtolower($numCampaigns ?? '');
-
-        if (count($descendants ?? []) > 0 && $affectedChangeSetCount > 0) {
-            $archiveWarningMsg = _t('SilverStripe\\CMS\\Controllers\\CMSMain.ArchiveWarningWithChildrenAndCampaigns', 'Warning: This page and all of its child pages will be unpublished and automatically removed from their associated {NumCampaigns} before being sent to the archive.\n\nAre you sure you want to proceed?', [ 'NumCampaigns' => $numCampaigns ]);
-        } elseif (count($descendants ?? []) > 0) {
+        if (count($descendants ?? []) > 0) {
             $archiveWarningMsg = $defaultMessage;
-        } elseif ($affectedChangeSetCount > 0) {
-            $archiveWarningMsg = _t('SilverStripe\\CMS\\Controllers\\CMSMain.ArchiveWarningWithCampaigns', 'Warning: This page will be unpublished and automatically removed from their associated {NumCampaigns} before being sent to the archive.\n\nAre you sure you want to proceed?', [ 'NumCampaigns' => $numCampaigns ]);
         } else {
             $archiveWarningMsg = _t('SilverStripe\\CMS\\Controllers\\CMSMain.ArchiveWarning', 'Warning: This page will be unpublished before being sent to the archive.\n\nAre you sure you want to proceed?');
         }
