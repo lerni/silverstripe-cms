@@ -19,7 +19,7 @@ class CMSPageSettingsController extends CMSMain
 
     public function getEditForm($id = null, $fields = null)
     {
-        $record = $this->getRecord($id ?: $this->currentPageID());
+        $record = $this->getRecord($id ?: $this->currentRecordID());
 
         return parent::getEditForm($id, ($record) ? $record->getSettingsFields() : null);
     }
