@@ -72,6 +72,7 @@ use SilverStripe\Versioned\Versioned;
 use SilverStripe\VersionedAdmin\Controllers\CMSPageHistoryViewerController;
 use SilverStripe\Model\ArrayData;
 use SilverStripe\View\Requirements;
+use SilverStripe\Dev\Deprecation;
 
 /**
  * The main "content" area of the CMS.

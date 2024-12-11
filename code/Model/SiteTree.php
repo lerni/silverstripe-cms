@@ -78,6 +78,7 @@ use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\View\Parsers\URLSegmentFilter;
 use SilverStripe\View\Shortcodes\EmbedShortcodeProvider;
 use SilverStripe\View\SSViewer;
+use SilverStripe\Dev\Deprecation;
 
 /**
  * Basic data-object representing all pages within the site tree. All page types that live within the hierarchy should
