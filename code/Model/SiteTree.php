@@ -1626,7 +1626,7 @@ class SiteTree extends DataObject implements PermissionProvider, i18nEntityProvi
         parent::onAfterDelete();
     }
 
-    public function validate()
+    public function validate(): ValidationResult
     {
         $result = parent::validate();
 
