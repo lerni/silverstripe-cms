@@ -154,10 +154,10 @@ en:
     FILE: File
     HEADER: 'This page will redirect users to another page'
     OTHERURL: 'Other website URL'
-    PLURALNAME: 'Base Pages'
+    PLURALNAME: 'Redirector Pages'
     PLURALS:
       one: 'A Redirector Page'
-      other: '{count} Base Pages'
+      other: '{count} Redirector Pages'
     REDIRECTTO: 'Redirect to'
     REDIRECTTOEXTERNAL: 'Another website'
     REDIRECTTOFILE: 'A file on your website'
@@ -341,10 +341,10 @@ en:
     EditLink: edit
     HEADER: 'This is a virtual page'
     HEADERWITHLINK: 'This is a virtual page copying content from "{title}" ({link})'
-    PLURALNAME: 'Base Pages'
+    PLURALNAME: 'Virtual Pages'
     PLURALS:
       one: 'A Virtual Page'
-      other: '{count} Base Pages'
+      other: '{count} Virtual Pages'
     PageTypNotAllowedOnRoot: 'Original page type "{type}" is not allowed on the root level for this virtual page'
     SINGULARNAME: 'Virtual Page'
     db_CustomMetaDescription: 'Custom Meta Description'
