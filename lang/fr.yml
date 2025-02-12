@@ -146,10 +146,12 @@ fr:
     Edit: Editer
     HelpChars: 'Les caractères spéciaux sont automatiquement convertis ou supprimés.'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Redirige vers une page interne ou une URL externe'
     DESCRIPTION: 'Redirige vers une page interne ou une URL externe'
     FILE: Fichier
     HEADER: 'Cette page va rediriger les utilisateurs vers une autre page'
     OTHERURL: "URL d'un autre site web"
+    PLURALNAME: 'Pages de redirection'
     PLURALS:
       one: 'Une page de redirection'
       other: '{count} pages de redirection'
@@ -179,6 +181,7 @@ fr:
     BUTTONSAVEPUBLISH: Publier
     BUTTONUNPUBLISH: 'Retirer du site publié'
     BUTTONUNPUBLISHDESC: Dépublier
+    CLASS_DESCRIPTION: 'Page au contenu généric'
     Comments: Commentaires
     Content: Contenu
     DEFAULTABOUTCONTENT: '<p>Vous pouvez remplir cette page avec votre propre contenu, ou la supprimer et créer vos propres pages.</p>'
@@ -268,10 +271,12 @@ fr:
     SINGULARNAME: 'Lien Site Tree'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Page liée'
+    CLASS_DESCRIPTION: "Affiche le contenu d'une autre page"
     DESCRIPTION: "Affiche le contenu d'une autre page"
     EditLink: éditer
     HEADER: 'Ceci est une page virtuelle'
     HEADERWITHLINK: 'Ceci est une page virtuelle dupliquant le contenu de "{title}" ({link})'
+    PLURALNAME: 'Page virtuelles'
     PLURALS:
       one: 'Une page virtuelle'
       other: '{count} pages virtuelles'

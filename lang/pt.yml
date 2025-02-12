@@ -123,6 +123,7 @@ pt:
     BUTTONSAVEPUBLISH: Publicar
     BUTTONUNPUBLISH: 'Remover do site Publicado'
     BUTTONUNPUBLISHDESC: 'Remover esta página do site publicado'
+    CLASS_DESCRIPTION: 'Página de conteúdo genérico'
     Comments: Comentários
     Content: Conteúdo
     DEFAULTABOUTTITLE: 'Quem Somos'
@@ -180,6 +181,7 @@ pt:
     many_many_LinkTracking: 'Rastreamento de links'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Página associada'
+    CLASS_DESCRIPTION: 'Apresentar o conteúdo de outra página'
     DESCRIPTION: 'Apresentar o conteúdo de outra página'
     EditLink: editar
     HEADER: 'Esta é uma página virtual'

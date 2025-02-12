@@ -102,6 +102,7 @@ ja_JP:
     BUTTONSAVEPUBLISH: 公開
     BUTTONUNPUBLISH: 非公開
     BUTTONUNPUBLISHDESC: 公開サイトから取り除きました
+    CLASS_DESCRIPTION: 通常のコンテンツページ
     Comments: コメント
     Content: 内容
     DEFAULTABOUTTITLE: 私たちについて
@@ -152,6 +153,7 @@ ja_JP:
     many_many_ImageTracking: 画像へのリンクを追跡
     many_many_LinkTracking: リンクを追跡
   SilverStripe\CMS\Model\VirtualPage:
+    CLASS_DESCRIPTION: 別のページのコンテンツを表示
     DESCRIPTION: 別のページのコンテンツを表示
     HEADER: これがバーチャルページです
     PageTypNotAllowedOnRoot: 'この仮想ページに対して元のページの種類{type}はルートレベルに配置されることが許可されていません。'

@@ -78,6 +78,7 @@ el:
     BUTTONSAVED: Αποθηκεύτηκε
     BUTTONSAVEPUBLISH: Δημοσίευση
     BUTTONUNPUBLISHDESC: 'Αφαίρεση αυτής της σελίδας απο τις δημοσιευμένες'
+    CLASS_DESCRIPTION: 'Σελίδα γενικού περιεχομένου'
     Comments: Σχόλια
     Content: Περιεχόμενο
     DEFAULTABOUTTITLE: 'Ποιοί είμαστε'
@@ -119,9 +120,11 @@ el:
     has_one_Parent: 'Γονική Σελίδα'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Συνδεδεμένη σελίδα'
+    CLASS_DESCRIPTION: 'Εμφανίζει το περιεχόμενο μιας άλλης σελίδας'
     DESCRIPTION: 'Εμφανίζει το περιεχόμενο μιας άλλης σελίδας'
     EditLink: επεξεργασία
     HEADER: 'Αυτή είναι μια εικονική σελίδα'
+    PLURALNAME: 'Εικονικές Σελίδες'
     SINGULARNAME: 'Εικονική Σελίδα'
   SilverStripe\CMS\Reports\BrokenFilesReport:
     BrokenLinksGroupTitle: 'Αναφορές ανενεργών συνδέσμων'

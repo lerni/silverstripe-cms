@@ -117,6 +117,7 @@ th:
     BUTTONSAVEPUBLISH: เผยแพร่
     BUTTONUNPUBLISH: ยังไม่ได้เผยแพร่
     BUTTONUNPUBLISHDESC: ลบหน้าเว็บนี้ออกจากเว็บไซต์ที่เผยแพร่แล้ว
+    CLASS_DESCRIPTION: หน้าเนื้อหาทั่วไป
     Comments: ความคิดเห็น
     Content: เนื้อหา
     DEFAULTABOUTTITLE: เกี่ยวกับเรา
@@ -177,6 +178,7 @@ th:
     many_many_ImageTracking: แกะรอยรูปภาพ
     many_many_LinkTracking: แกะรอยลิงก์
   SilverStripe\CMS\Model\VirtualPage:
+    CLASS_DESCRIPTION: แสดงเนื้อหาของหน้าเว็บอื่นๆ
     DESCRIPTION: แสดงเนื้อหาของหน้าเว็บอื่นๆ
     HEADER: นี่เป็นหน้าเว็บจำลอง
     PageTypNotAllowedOnRoot: 'ชนิดของหน้าเว็บดั้งเดิม "{type}" ไม่ได้รับอนุญาตให้ใช้งานกับหน้าเว็บจำลองที่ตำแหน่ง root'

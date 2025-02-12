@@ -90,6 +90,7 @@ gl_ES:
     BUTTONSAVEPUBLISH: Publicar
     BUTTONUNPUBLISH: 'Sen publicar'
     BUTTONUNPUBLISHDESC: 'Eliminar esta páxina do sitio publicado'
+    CLASS_DESCRIPTION: 'Páxina de contido xenérico'
     Comments: Comentarios
     Content: Contido
     DEFAULTABOUTTITLE: 'Sobre nós'
@@ -137,6 +138,7 @@ gl_ES:
     many_many_ImageTracking: 'Imaxe de Seguemento'
     many_many_LinkTracking: 'Ligazón de Seguemento'
   SilverStripe\CMS\Model\VirtualPage:
+    CLASS_DESCRIPTION: 'Visualizar o contido doutra páxina'
     DESCRIPTION: 'Visualizar o contido doutra páxina'
     HEADER: 'Esta é unha páxina virtual'
     SINGULARNAME: 'Páxina Virtual'

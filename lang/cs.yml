@@ -145,11 +145,12 @@ cs:
     Edit: Editovat
     HelpChars: 'Zvláštní znaky jsou automaticky zkonvertovány nebo odstraněny'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Přesměruje na interní stránku nebo na externí URL'
     DESCRIPTION: 'Přesměruje na interní stránku nebo na externí URL'
     FILE: Soubor
     HEADER: 'Tato stránka přesměruje uživatele na jinou stránku'
     OTHERURL: 'Jiná web adresa'
-    PLURALNAME: 'Základní stránky'
+    PLURALNAME: 'Přesměrovací stránky'
     REDIRECTTO: 'Přesměrovat na'
     REDIRECTTOEXTERNAL: 'Jiná web stránka'
     REDIRECTTOPAGE: 'Stránka na vašem webu'
@@ -176,6 +177,7 @@ cs:
     BUTTONSAVEPUBLISH: Zveřejnit
     BUTTONUNPUBLISH: Nezveřejňovat
     BUTTONUNPUBLISHDESC: 'Odstranit tuto stránku z publikovaných na webu'
+    CLASS_DESCRIPTION: 'Obecný obsah stránky'
     Comments: Komentáře
     Content: Obsah
     DEFAULTABOUTCONTENT: '<p>Můžete tuto stránku vyplnit vlastním obsahem, nebo ji smazat a vytvořit si vlastní stránky. <br /> </p>'
@@ -254,11 +256,12 @@ cs:
     TITLE_USED_ON: 'Použito na'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Odkazovaná stránka'
+    CLASS_DESCRIPTION: 'Zobrazí obsah jiné stránky'
     DESCRIPTION: 'Zobrazí obsah jiné stránky'
     EditLink: editovat
     HEADER: 'Toto je virtuální stránka'
     HEADERWITHLINK: 'Toto je virtuální stránka, kopíruje se obsah z "{title}" ({link})'
-    PLURALNAME: 'Základní stránky'
+    PLURALNAME: 'Virtuální stránky'
     PageTypNotAllowedOnRoot: 'Původní stránka typu "{type}" není povolena na nejvyšší úrovni pro tuto virtuální stránku'
     SINGULARNAME: 'Virtuální stránka'
   SilverStripe\CMS\Reports\BrokenFilesReport:

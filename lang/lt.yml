@@ -137,7 +137,7 @@ lt:
     FILE: Byla
     HEADER: 'Šis puslapis nukreips lankytojus į kitą puslapį'
     OTHERURL: 'Kitos svetainės URL adresas'
-    PLURALNAME: 'Baziniai puslapiai'
+    PLURALNAME: 'Nukreipimo puslapiai'
     REDIRECTTO: 'Nukreipti į'
     REDIRECTTOEXTERNAL: 'Kita svetainė'
     REDIRECTTOPAGE: 'Puslapis Jūsų svetainėje'
@@ -163,6 +163,7 @@ lt:
     BUTTONSAVEPUBLISH: Publikuoti
     BUTTONUNPUBLISH: Nebepublikuoti
     BUTTONUNPUBLISHDESC: 'Pašalinti šį puslapį iš publikuojamos svetainės'
+    CLASS_DESCRIPTION: 'Standartinio turinio puslapis'
     Comments: Komentarai
     Content: Turinys
     DEFAULTABOUTTITLE: 'Apie mus'
@@ -236,11 +237,12 @@ lt:
     has_one_Parent: Priklauso
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Prijungtas puslapis'
+    CLASS_DESCRIPTION: 'Rodo kito puslapio turinį'
     DESCRIPTION: 'Rodo kito puslapio turinį'
     EditLink: redaguoti
     HEADER: 'Tai yra virtualus puslapis'
     HEADERWITHLINK: 'Tai yra virtualus puslapis su turiniu iš puslapio "{title}" ({link})'
-    PLURALNAME: 'Baziniai puslapiai'
+    PLURALNAME: 'Virtualūs puslapiai'
     PageTypNotAllowedOnRoot: 'Norimas puslapio tipas "{type}" neleidžiamas šiam virtualiam puslapiui šakniniame lygmenyje.'
     SINGULARNAME: 'Virtualus puslapis'
   SilverStripe\CMS\Reports\BrokenFilesReport:

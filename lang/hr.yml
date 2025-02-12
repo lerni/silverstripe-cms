@@ -139,11 +139,12 @@ hr:
     Edit: Uredi
     HelpChars: 'Posebni znakovi se automatski pretvaraju ili uklanjaju.'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Preusmjerava na internu stranicu ili vanjski URL'
     DESCRIPTION: 'Preusmjerava na internu stranicu ili vanjski URL'
     FILE: Datoteka
     HEADER: 'Ova stranica preusmjeriti će korisnike na drugu stranicu'
     OTHERURL: 'URL drugog weba'
-    PLURALNAME: 'Osnovne stranice'
+    PLURALNAME: 'Preusmjeravajuće stranice'
     REDIRECTTO: 'Preusmjeri na'
     REDIRECTTOEXTERNAL: 'Drugi web'
     REDIRECTTOPAGE: 'Stranicu na Vašom webu'
@@ -170,6 +171,7 @@ hr:
     BUTTONSAVEPUBLISH: Objavi
     BUTTONUNPUBLISH: Odjavi
     BUTTONUNPUBLISHDESC: 'Izbrišite ovu stranicu sa objavljene'
+    CLASS_DESCRIPTION: 'Obična sadržajna stranica'
     Comments: Komentari
     Content: Sadržaj
     DEFAULTABOUTCONTENT: '<p>Možete popuniti ovu stranicu s Vašim sadržajem, ili obrisati je i kreirati novu stranicu.</p>'
@@ -246,11 +248,12 @@ hr:
     has_one_Parent: Roditelj
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Povezane stranice'
+    CLASS_DESCRIPTION: 'Prikazuje sadržaj druge stranice'
     DESCRIPTION: 'Prikazuje sadržaj druge stranice'
     EditLink: uredi
     HEADER: 'Ovo je virtualna stranica'
     HEADERWITHLINK: 'Ova virtualna stranica kopira sadržaj sa  "{title}" ({link})'
-    PLURALNAME: 'Osnovne stranice'
+    PLURALNAME: 'Virtualne stranice'
     PageTypNotAllowedOnRoot: 'Originalni tip stranice  "{type}" nije dozvoljen na prvom nivu ove virtualne stranice'
     SINGULARNAME: 'Virtualna stranica'
   SilverStripe\CMS\Reports\BrokenFilesReport:
