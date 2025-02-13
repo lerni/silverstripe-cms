@@ -127,6 +127,7 @@ et_EE:
     BUTTONSAVEPUBLISH: Avalda
     BUTTONUNPUBLISH: 'Võta maha'
     BUTTONUNPUBLISHDESC: 'Eemalda see lehekülg avalikult saidilt'
+    CLASS_DESCRIPTION: 'Üldine sisuleht'
     Comments: Komentaarid
     Content: Sisu
     DEFAULTABOUTTITLE: Meist
@@ -190,6 +191,7 @@ et_EE:
     many_many_ImageTracking: 'Pildi jälgimine'
     many_many_LinkTracking: 'Lingi jälgimine'
   SilverStripe\CMS\Model\VirtualPage:
+    CLASS_DESCRIPTION: 'Kuvab sisu teiselt lehelt'
     DESCRIPTION: 'Kuvab sisu teiselt lehelt'
     EditLink: redigeeri
     HEADER: 'See on virtuaalne leht'

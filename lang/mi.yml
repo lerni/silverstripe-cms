@@ -137,6 +137,7 @@ mi:
     BUTTONSAVEPUBLISH: Whakaputa
     BUTTONUNPUBLISH: Wetewhakaputa
     BUTTONUNPUBLISHDESC: 'Tangohia tēnei whārangi i te pae kua whakaputaina'
+    CLASS_DESCRIPTION: 'Whārangi ihirangi ahuwhānui'
     Comments: 'Ngā Tākupu'
     Content: 'Ngā Ihirangi'
     DEFAULTABOUTTITLE: 'Mō Mātou'
@@ -212,6 +213,7 @@ mi:
     has_one_Parent: Matua
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Whārangi kua honoa'
+    CLASS_DESCRIPTION: 'Ka whakaatu i ngā ihirangi o tētahi atu whārangi'
     DESCRIPTION: 'Ka whakaatu i ngā ihirangi o tētahi atu whārangi'
     EditLink: Whakatika
     HEADER: 'He whārangi mariko tēnei'

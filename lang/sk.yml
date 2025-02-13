@@ -151,11 +151,12 @@ sk:
     Edit: Editovať
     HelpChars: 'Špeciálne znaky sú automaticky zkonvertované alebo ostránené.'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Presmeruje na internú stránku alebo na externé URL'
     DESCRIPTION: 'Presmeruje na internú stránku alebo na externé URL'
     FILE: Súbor
     HEADER: 'Táto stránka presmeruje používateľov na inú stránku'
     OTHERURL: 'Iné web URL.'
-    PLURALNAME: 'Základné stránky'
+    PLURALNAME: 'Presmerovacie stránky'
     PLURALS:
       few: '{count} Základné stránky'
       many: '{count} Základných stránok'
@@ -192,6 +193,7 @@ sk:
     BUTTONSAVEPUBLISH: Zverejniť
     BUTTONUNPUBLISH: Nezverejniť
     BUTTONUNPUBLISHDESC: 'Odstrániť túto stránku z publikovaných na webe'
+    CLASS_DESCRIPTION: 'Generický obsah stránky'
     Comments: Komentáre
     Content: Obsah
     DEFAULTABOUTCONTENT: '<p>Túto stránku môžete vyplniť vlastným obsahom, alebo ju zmazať a vytvoriť vaše vlastné stránky.</p>'
@@ -337,11 +339,12 @@ sk:
     many_many_LinkTracking: 'Záznamy o odkazoch'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Odkazovaná stránka'
+    CLASS_DESCRIPTION: 'Zobrazí obsah inej stránky'
     DESCRIPTION: 'Zobrazí obsah inej stránky'
     EditLink: editovať
     HEADER: 'Toto je virtuálna stránka'
     HEADERWITHLINK: 'Toto je virtuálna stránka, kopíruje sa obsah z "{title}" ({link})'
-    PLURALNAME: 'Základné stránky'
+    PLURALNAME: 'Virtuálne stránky'
     PLURALS:
       few: '{count} Základné stránky'
       many: '{count} Základných stránok'

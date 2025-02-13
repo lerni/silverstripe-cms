@@ -126,6 +126,7 @@ ko:
     BUTTONSAVEPUBLISH: 공개
     BUTTONUNPUBLISH: 비공개
     BUTTONUNPUBLISHDESC: '게시된 사이트로부터 이 페이지를 삭제'
+    CLASS_DESCRIPTION: '일반 콘텐츠 페이지'
     Comments: 코멘트
     Content: 내용
     DEFAULTABOUTTITLE: '회사 소개'
@@ -196,6 +197,7 @@ ko:
     many_many_LinkTracking: '링크 추적'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: '링크된 페이지'
+    CLASS_DESCRIPTION: '다른 페이지의 내용보기'
     DESCRIPTION: '다른 페이지의 내용보기'
     EditLink: 편집
     HEADER: '가상 페이지입니다'

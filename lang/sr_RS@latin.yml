@@ -135,6 +135,7 @@ sr_RS@latin:
     BUTTONSAVEPUBLISH: Objavi
     BUTTONUNPUBLISH: 'Poništi objavu'
     BUTTONUNPUBLISHDESC: 'Ukloni ovu stranicu iz objavljenog sajta'
+    CLASS_DESCRIPTION: 'Obična stranica'
     Comments: Komentari
     Content: Sadržaj
     DEFAULTABOUTTITLE: 'O nama'
@@ -205,6 +206,7 @@ sr_RS@latin:
     many_many_LinkTracking: 'Praćenje linkova'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Povezana stranica'
+    CLASS_DESCRIPTION: 'Prikazuje sadržaj druge stranice'
     DESCRIPTION: 'Prikazuje sadržaj druge stranice'
     EditLink: izmeni
     HEADER: 'Ovo je virtuelna stranica'

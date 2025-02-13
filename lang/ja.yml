@@ -122,6 +122,7 @@ ja:
     FILE: ファイル
     HEADER: このページをユーザーを変更して他のページにしますか？
     OTHERURL: 他のウェブサイトのURL
+    PLURALNAME: リダイレクトページ
     REDIRECTTO: 変更は
     REDIRECTTOEXTERNAL: 他のウェブサイト
     REDIRECTTOPAGE: 貴方のウェブサイトを表示します
@@ -146,6 +147,7 @@ ja:
     BUTTONSAVEPUBLISH: 公開
     BUTTONUNPUBLISH: 非公開
     BUTTONUNPUBLISHDESC: 公開サイトから取り除きました
+    CLASS_DESCRIPTION: 通常のコンテンツページ
     Comments: コメント
     Content: コンテンツ
     DEFAULTABOUTTITLE: 私たちについて
@@ -217,10 +219,12 @@ ja:
     many_many_LinkTracking: リンクを追跡
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: リンクされたページ
+    CLASS_DESCRIPTION: 別のページのコンテンツを表示
     DESCRIPTION: 別のページのコンテンツを表示
     EditLink: 編集
     HEADER: これがバーチャルページです
     HEADERWITHLINK: 'これは "{title}" ({link}) からコンテンツをコピーしている仮想ページです'
+    PLURALNAME: 仮想ページ
     PageTypNotAllowedOnRoot: 'この仮想ページに対して元のページの種類{type}はルートレベルに配置されることが許可されていません。'
     SINGULARNAME: 仮想ページ
   SilverStripe\CMS\Reports\BrokenFilesReport:

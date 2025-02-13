@@ -150,11 +150,12 @@ nl:
     Edit: Bewerken
     HelpChars: 'Speciale tekens worden automatische omgezet of verwijderd.'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Stuurt door naar een interne pagina of een externe URL'
     DESCRIPTION: 'Stuurt door naar een interne pagina of een externe URL'
     FILE: Bestand
     HEADER: 'Deze pagina zal gebruikers naar een andere pagina doorsturen (redirect)'
     OTHERURL: 'Andere website URL'
-    PLURALNAME: Verwijzingspagina
+    PLURALNAME: "Verwijzingspagina's"
     PLURALS:
       one: Verwijzingspagina
       other: "{count} Verwijzingspagina's"
@@ -164,6 +165,8 @@ nl:
     REDIRECTTOPAGE: 'Een pagina op deze website'
     SINGULARNAME: Verwijzingspagina
     YOURPAGE: 'Pagina op deze website'
+    db_ExternalURL: 'Externe URL'
+    db_RedirectionType: 'Type verwijzing'
     has_one_LinkTo: 'Verwijs naar'
     has_one_LinkToFile: 'Link naar bestand'
   SilverStripe\CMS\Model\RedirectorPageController:
@@ -187,6 +190,7 @@ nl:
     BUTTONSAVEPUBLISH: Publiceren
     BUTTONUNPUBLISH: 'Publicatie intrekken'
     BUTTONUNPUBLISHDESC: 'Deze pagina verwijderen uit de gepubliceerde site'
+    CLASS_DESCRIPTION: 'Algemene pagina'
     Comments: Commentaar
     Content: Inhoud
     DEFAULTABOUTCONTENT: "<p>Je kan deze pagina vullen met eigen tekst, of deze verwijderen en nieuwe pagina's aanmaken.</p>"
@@ -194,6 +198,7 @@ nl:
     DEFAULTCONTACTCONTENT: "<p>Je kan deze pagina vullen met nieuwe tekst, of verwijderen en nieuwe pagina's aanmaken.</p>"
     DEFAULTCONTACTTITLE: Contact
     DEFAULTHOMECONTENT: '<p>Welkom bij Silverstripe! Dit is de standaard homepagina. Je kan deze pagina wijzigen door <a href="admin/">het CMS</a> te openen.</p><p>Je kan verder de <a href="http://docs.silverstripe.org">documentatie voor ontwikkelaars</a> raadplegen of aan <a href="http://www.silverstripe.org/learn/lessons">de tutorials</a> beginnen.</p>'
+    DEFAULTHOMECONTENT2: '<p>Welkom bij Silverstripe! Dit is de standaard homepagina. Je kan deze pagina wijzigen door <a href="admin/">het CMS</a> te openen.</p><p>Voor meer informatie kan je de <a href="http://docs.silverstripe.org">documentatie voor ontwikkelaars</a> bekijken.</p>'
     DEPENDENT_NOTE: "De volgende pagina's zijn afhankelijk van deze pagina. Hieronder vallen virtuele pagina's, verwijzingspagina's en pagina's met links in hun inhoud."
     DESCRIPTION: 'Algemene pagina'
     DependtPageColumnLinkType: Linktype
@@ -268,14 +273,43 @@ nl:
     Visibility: Zichtbaarheid
     belongs_many_many_ContentReviewGroups: Inhoudsbeoordelingsgroepen
     belongs_many_many_ContentReviewUsers: Inhoudsbeoordelingsgebruikers
+    belongs_many_many_RelationFieldsTestPages: "Relatievelden test pagina's"
+    db_CanEditType: 'Kan bewerken type'
+    db_CanViewType: 'Kan bekijken type'
     db_Content: Inhoud
+    db_ContentReviewType: 'Inhoudsbeoordeling type'
+    db_HasBrokenFile: 'Heeft verbroken bestand'
+    db_HasBrokenLink: 'Heeft verbroken link'
+    db_LastEditedByName: 'Laatst bewerkt door naam'
+    db_MenuTitle: Menutitel
+    db_MetaDescription: 'Meta omschrijving'
+    db_NextReviewDate: 'Volgende reviewdatum'
+    db_OwnerNames: 'Eigenaar namen'
+    db_PublicHistory: 'Publieke geschiedenis'
+    db_ReportClass: 'Rapportage class'
+    db_ReviewPeriodDays: 'Review periode dagen'
+    db_ShareTokenSalt: Deeltoken-salt
+    db_ShowInMenus: "Weergeven in menu's"
+    db_ShowInSearch: 'Weergeven in zoeken'
+    db_ShowPageUtilities: 'Toon pagina utilities'
     db_Sort: Volgorde
     db_Title: Titel
     db_Version: Versie
+    has_many_BackLinks: 'Links hiernaartoe'
+    has_many_ShareTokens: Deeltoken
+    has_many_VirtualPages: "Virtuele pagina's"
     has_one_Parent: 'Bovenliggende pagina'
+    has_one_RelationFieldsTestPage: 'Relatievelden test pagina'
+    has_one_WorkflowDefinition: 'Workflow definitie'
+    many_many_AdditionalWorkflowDefinitions: 'Aanvullende workflow definities'
     many_many_BackLinkTracking: 'Backlinks traceren'
+    many_many_CrossSubsiteLinkTracking: 'Andere subsite linkverwijzing'
+    many_many_EditorGroups: Redacteursgroepen
+    many_many_EditorMembers: Redacteurs
     many_many_ImageTracking: 'Afbeeldingen traceren'
     many_many_LinkTracking: 'Links traceren'
+    many_many_ViewerGroups: Bekijkersgroepen
+    many_many_ViewerMembers: Bekijk-gebruikers
   SilverStripe\CMS\Model\SiteTreeFileExtension:
     TITLE_USED_ON: 'Gebruikt op:'
   SilverStripe\CMS\Model\SiteTreeFileFormFactoryExtension:
@@ -286,21 +320,25 @@ nl:
       one: '1 pagina link'
       other: '{count} pagina links'
     SINGULARNAME: 'Pagina link'
+    has_one_Linked: Gelinkt
     has_one_Parent: Bovenliggende
   SilverStripe\CMS\Model\SiteTreeLinkTracking:
     many_many_LinkTracking: 'Links volgen'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Gekoppelde pagina'
+    CLASS_DESCRIPTION: 'Toont de inhoud van een andere pagina'
     DESCRIPTION: 'Toont de inhoud van een andere pagina'
     EditLink: wijzigen
     HEADER: 'Dit is een virtuele pagina'
     HEADERWITHLINK: 'Dit is een virtuele pagina met de inhoud van "{title}" ({link})'
-    PLURALNAME: 'Virtuele pagina'
+    PLURALNAME: "Virtuele pagina's"
     PLURALS:
       one: 'Virtuele pagina'
       other: "{count} Virtuele pagina's"
     PageTypNotAllowedOnRoot: 'Voor deze virtuele pagina is het originele paginatype "{type}" niet toegestaan op het hoogste niveau.'
     SINGULARNAME: 'Virtuele pagina'
+    db_VersionID: 'Versie ID'
+    has_one_CopyContentFrom: 'Kopieer inhoud vanaf'
   SilverStripe\CMS\Reports\BrokenFilesReport:
     BROKENFILES: 'Pagina met verbroken afbeeldingskoppelingen'
     BrokenLinksGroupTitle: 'Rapport van niet-werkende links'

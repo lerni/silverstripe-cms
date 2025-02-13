@@ -151,6 +151,7 @@ zh:
     BUTTONSAVEPUBLISH: 发布
     BUTTONUNPUBLISH: 未发布
     BUTTONUNPUBLISHDESC: 将该页面从已发布的站点中删除
+    CLASS_DESCRIPTION: 通用内容页面
     Comments: 评论
     Content: 内容
     DEFAULTABOUTTITLE: 关于我们
@@ -226,6 +227,7 @@ zh:
     has_one_Parent: 父
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 链接的页面
+    CLASS_DESCRIPTION: 显示另一个页面的内容
     DESCRIPTION: 显示另一个页面的内容
     EditLink: 编辑
     HEADER: 这是一个虚拟页面

@@ -136,6 +136,7 @@ sr:
     BUTTONSAVEPUBLISH: Објави
     BUTTONUNPUBLISH: 'Поништи објаву'
     BUTTONUNPUBLISHDESC: 'Уклони ову страницу из објављеног сајта'
+    CLASS_DESCRIPTION: 'Обична страница'
     Comments: Коментари
     Content: Садржај
     DEFAULTABOUTTITLE: 'О нама'
@@ -206,6 +207,7 @@ sr:
     many_many_LinkTracking: 'Праћење линкова'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Повезана страница'
+    CLASS_DESCRIPTION: 'Приказује садржај друге странице'
     DESCRIPTION: 'Приказује садржај друге странице'
     EditLink: измени
     HEADER: 'Ово је виртуелна страница'

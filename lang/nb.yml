@@ -132,6 +132,7 @@ nb:
     FILE: Fil
     HEADER: 'Denne siden vil omdirigere brukere til en annen side'
     OTHERURL: 'Nettadresse til et annet nettsted'
+    PLURALNAME: Omdirigeringssider
     REDIRECTTO: 'Omdiriger til'
     REDIRECTTOEXTERNAL: 'Et annet nettsted'
     REDIRECTTOPAGE: 'En side på nettstedet'
@@ -157,6 +158,7 @@ nb:
     BUTTONSAVEPUBLISH: Publiser
     BUTTONUNPUBLISH: Avpubliser
     BUTTONUNPUBLISHDESC: 'Fjern denne siden fra det publiserte nettstedet'
+    CLASS_DESCRIPTION: 'Generisk innholdsside'
     Comments: Kommentarer
     Content: Innhold
     DEFAULTABOUTTITLE: 'Om oss'
@@ -227,10 +229,12 @@ nb:
     many_many_LinkTracking: Lenkesporing
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Lenket side'
+    CLASS_DESCRIPTION: 'Viser innholdet av en annen side'
     DESCRIPTION: 'Viser innholdet av en annen side'
     EditLink: rediger
     HEADER: 'Dette er en virituell side'
     HEADERWITHLINK: 'Dette er en virtuell side som kopierer innhold fra "{title}" ({link})'
+    PLURALNAME: 'Virtuelle sider'
     PageTypNotAllowedOnRoot: 'Originaltypen "{type}" er ikke tillatt på toppnivået for denne virtuelle siden.'
     SINGULARNAME: 'Virtuell side'
   SilverStripe\CMS\Reports\BrokenFilesReport:

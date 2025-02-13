@@ -144,11 +144,12 @@ es_MX:
     Edit: Editar
     HelpChars: 'Carácteres especiales son automáticamente convertidos o eliminados.'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Redirecciona a una página interna o a una URL externa'
     DESCRIPTION: 'Redirecciona a una página interna o a una URL externa'
     FILE: Archivo
     HEADER: 'Esta página dirigirá al usuarios a otra página'
     OTHERURL: 'Otro URL del sitio web'
-    PLURALNAME: 'User Defined Forms'
+    PLURALNAME: 'Páginas de redirección'
     PLURALS:
       one: 'Una Página de Redirección'
       other: '{count} Páginas de Redirección'
@@ -178,6 +179,7 @@ es_MX:
     BUTTONSAVEPUBLISH: Publicar
     BUTTONUNPUBLISH: 'Ocultar al público'
     BUTTONUNPUBLISHDESC: 'Quitar ésta página del sitio público'
+    CLASS_DESCRIPTION: 'Página de contenido genérico'
     Comments: Comentarios
     Content: Contenido
     DEFAULTABOUTCONTENT: '<p>Puedes agregar tu contenido a esta página, o eliminarla y agregar tus propias páginas.</p>'
@@ -237,10 +239,11 @@ es_MX:
     TITLE_USED_ON: 'Usado en'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Página vinculada'
+    CLASS_DESCRIPTION: 'Muestra el contenido de otra página'
     DESCRIPTION: 'Muestra el contenido de otra página'
     EditLink: editar
     HEADER: 'Esta es una página virtual'
-    PLURALNAME: 'User Defined Forms'
+    PLURALNAME: 'Páginas Virtuales'
     PLURALS:
       one: 'Una Página Virtual'
       other: '{count} Páginas Virtuales'
