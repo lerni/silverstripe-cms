@@ -165,6 +165,7 @@ fa_IR:
     BUTTONSAVEPUBLISH: انتشار
     BUTTONUNPUBLISH: 'عدم انتشار'
     BUTTONUNPUBLISHDESC: 'حذف این صفحه از سایت منتشر شده'
+    CLASS_DESCRIPTION: 'صفحه محتوای عمومی'
     Comments: دیدگاه‌ها
     Content: 'درون مایه'
     DEFAULTABOUTTITLE: 'درباره ما'
@@ -239,10 +240,11 @@ fa_IR:
     has_one_Parent: والد
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'صفحه ارجاعی'
+    CLASS_DESCRIPTION: 'نمایش‌دهنده‌ی محتوای صفحه‌ی دیگر'
     DESCRIPTION: 'نمایش‌دهنده‌ی محتوای صفحه‌ی دیگر'
     EditLink: ویرایش
     HEADER: 'این یک صفحه مجازی است'
-    PLURALNAME: 'صفحه اصلی'
+    PLURALNAME: 'صفحات مجازی'
     SINGULARNAME: 'صفحه مجازی'
   SilverStripe\CMS\Reports\BrokenFilesReport:
     BROKENFILES: 'صفحات دارای فایل معیوب'

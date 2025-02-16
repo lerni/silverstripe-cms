@@ -150,6 +150,7 @@ ar:
     BUTTONSAVEPUBLISH: نشر
     BUTTONUNPUBLISH: 'غير منشور'
     BUTTONUNPUBLISHDESC: 'حذف هذه الصفحة من الموقع المنشور'
+    CLASS_DESCRIPTION: 'صفحة المحتوى العام'
     Comments: التعليقات
     Content: المحتوى
     DEFAULTABOUTTITLE: حول
@@ -225,6 +226,7 @@ ar:
     has_one_Parent: والد
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'الصفحة المرتبطة'
+    CLASS_DESCRIPTION: 'يعرض محتوى صفحة أخرى'
     DESCRIPTION: 'يعرض محتوى صفحة أخرى'
     EditLink: حرر
     HEADER: 'هذه صفحة افتراضية'

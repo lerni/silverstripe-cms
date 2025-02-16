@@ -147,10 +147,11 @@ fi_FI:
     Edit: Muokkaa
     HelpChars: 'Erikoismerkit muunnetaan tai poistetaan automaattisesti.'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Edelleenohjaa toiselle sisäiselle sivulle tai ulkoiseen URL-osoitteeseen'
     DESCRIPTION: 'Edelleenohjaa toiselle sisäiselle sivulle tai ulkoiseen URL-osoitteeseen'
     HEADER: 'Tämä sivu ohjaa käyttäjän toiselle sivulle'
     OTHERURL: 'Toisen verkkosivuston URL-osoite'
-    PLURALNAME: Pohjasivut
+    PLURALNAME: 'Uudelleenohjaavat sivut'
     PLURALS:
       one: 'Uudelleenohjaava sivu'
       other: '{count} Uudelleenohjaavaa sivua'
@@ -179,6 +180,7 @@ fi_FI:
     BUTTONSAVEPUBLISH: Julkaise
     BUTTONUNPUBLISH: 'Poista julkaisusta'
     BUTTONUNPUBLISHDESC: 'Poista tämä sivu julkaistulta sivustolta'
+    CLASS_DESCRIPTION: 'Yleinen sisältösivu'
     Comments: Kommentit
     Content: Sisältö
     DEFAULTABOUTCONTENT: '<p>Voit täyttää tämän sivun omalla sisällölläsi tai poistaa sen ja luoda omia sivuja.<br /></p>'
@@ -272,11 +274,12 @@ fi_FI:
     SINGULARNAME: 'Hakemistopuun linkki'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Linkitetty sivu'
+    CLASS_DESCRIPTION: 'Näyttää toisen sivun sisällön'
     DESCRIPTION: 'Näyttää toisen sivun sisällön'
     EditLink: muokkaa
     HEADER: 'Tämä on virtuaalisivu'
     HEADERWITHLINK: 'Tämä on virtuaalisivu, joka kopioi sisällön kohteesta "{title}" ({link})'
-    PLURALNAME: Pohjasivut
+    PLURALNAME: Virtuaalisivut
     PLURALS:
       one: 'Virtuaali sivu'
       other: '{count} Virtuaali sivua'

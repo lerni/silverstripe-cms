@@ -119,6 +119,7 @@ zh_TW:
     many_many_ImageTracking: 影像追蹤
     many_many_LinkTracking: 鏈結追蹤
   SilverStripe\CMS\Model\VirtualPage:
+    CLASS_DESCRIPTION: 顯示其他網頁的內容
     DESCRIPTION: 顯示其他網頁的內容
     HEADER: 這是一個虛擬網頁
     SINGULARNAME: 虛擬網頁

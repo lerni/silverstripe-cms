@@ -165,6 +165,7 @@ uk:
     many_many_ImageTracking: 'Відстеження зображень'
     many_many_LinkTracking: 'Відстеження посилань'
   SilverStripe\CMS\Model\VirtualPage:
+    CLASS_DESCRIPTION: 'Відображення вмісту іншої сторінки'
     DESCRIPTION: 'Відображення вмісту іншої сторінки'
     HEADER: 'Це віртуальна сторінка'
     PageTypNotAllowedOnRoot: 'Тип сторінки "{type}" не допускається на кореневому рівні для цієї віртуальної сторінки'

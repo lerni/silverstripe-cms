@@ -146,6 +146,7 @@ bg:
     Edit: Редактирай
     HelpChars: 'Специалните символи са автоматично конвертирани или изтрити.'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Пренасочва към страница от сайта или външен URL адрес'
     DESCRIPTION: 'Пренасочва към страница от сайта или външен URL адрес'
     FILE: Файл
     HEADER: 'Тази страница ще пренасочи потребители към друга страница'
@@ -180,6 +181,7 @@ bg:
     BUTTONSAVEPUBLISH: Публикувай
     BUTTONUNPUBLISH: 'Премахни от публикация'
     BUTTONUNPUBLISHDESC: 'Премахни тази страница от публикувания сайт'
+    CLASS_DESCRIPTION: 'Обща страница със съдържание'
     Comments: Коментари
     Content: Съдържание
     DEFAULTABOUTCONTENT: '<p>Можете да добавите собствено съдържание в тази страница или да я изтриете и да създадете ваши собствени страници.<br /></p>'
@@ -268,6 +270,7 @@ bg:
     SINGULARNAME: 'Връзка към Дървото на сайта'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Свързани страници'
+    CLASS_DESCRIPTION: 'Показва съдържанието на друга страница'
     DESCRIPTION: 'Показва съдържанието на друга страница'
     EditLink: промени
     HEADER: 'Това е виртуална страница'

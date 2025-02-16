@@ -100,6 +100,7 @@ hu:
     FILE: Fájl
     HEADER: 'Ez az oldal egy másik oldalra fogja írányítani a felhasználókat'
     OTHERURL: 'Egy másik weboldal URL-je '
+    PLURALNAME: 'Átirányító oldalak'
     REDIRECTTO: 'Átirányítás ide:'
     REDIRECTTOEXTERNAL: 'Egy másik weboldal'
     REDIRECTTOPAGE: 'Egy oldal a weblapodon'
@@ -123,6 +124,7 @@ hu:
     BUTTONSAVEPUBLISH: Publikálni
     BUTTONUNPUBLISH: 'Publikálás visszavonása'
     BUTTONUNPUBLISHDESC: 'Oldal eltávolítása a publikált oldalról'
+    CLASS_DESCRIPTION: 'Egyszerű oldal'
     Comments: Kommentárok
     Content: Tartalom
     DEFAULTABOUTTITLE: Rólunk
@@ -186,6 +188,7 @@ hu:
     CHOOSE: 'Hivatkozott oldal'
     EditLink: szerkeszt
     HEADER: 'Ez egy virtuális oldal'
+    PLURALNAME: 'Virtuális oldalak'
     SINGULARNAME: 'Virtuális oldal'
   SilverStripe\CMS\Reports\BrokenFilesReport:
     BROKENFILES: 'Oldalak hibás fájl hivatkozásokkal'

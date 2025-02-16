@@ -11,6 +11,7 @@ uk_UA:
     Edit: Редагувати
   SilverStripe\CMS\Model\SiteTree:
     APPEARSVIRTUALPAGES: 'Цей зміст також відображається на віртуальних сторінках у розділах {title}.'
+    CLASS_DESCRIPTION: 'Сторінка загального змісту'
     Content: Зміст
     DEFAULTABOUTCONTENT: '<p>Ви можете заповнити цю сторінку власним змістом або видалити її та створити власні сторінки.</p>'
     DEFAULTCONTACTCONTENT: '<p>Ви можете заповнити цю сторінку власним змістом або видалити її та створити власні сторінки.</p>'
@@ -38,6 +39,7 @@ uk_UA:
     db_ContentReviewType: 'Тип перегляду змісту'
     db_URLSegment: 'сегмент URL'
   SilverStripe\CMS\Model\VirtualPage:
+    CLASS_DESCRIPTION: 'Відображає зміст іншої сторінки'
     DESCRIPTION: 'Відображає зміст іншої сторінки'
     HEADERWITHLINK: 'Це віртуальна сторінка, яка копіює вміст із "{title}" ({link})'
     has_one_CopyContentFrom: 'Копіювати зміст із'
