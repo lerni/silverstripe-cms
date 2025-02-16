@@ -111,7 +111,7 @@ id:
     FILE: Berkas
     HEADER: 'Laman ini akan mengarahkan pengguna ke laman lain'
     OTHERURL: 'URL situs web lain'
-    PLURALNAME: 'Laman Dasar'
+    PLURALNAME: 'Laman Pengarah'
     REDIRECTTO: 'Arahkan lagi ke'
     REDIRECTTOEXTERNAL: 'Situs web yang lain'
     REDIRECTTOPAGE: 'Laman pada situs Anda'
@@ -135,6 +135,7 @@ id:
     BUTTONSAVED: Tersimpan
     BUTTONUNPUBLISH: Batalterbitkan
     BUTTONUNPUBLISHDESC: 'Hapus laman ini dari situs terbit'
+    CLASS_DESCRIPTION: 'Laman konten biasa'
     Comments: Komen-komen
     Content: Konten
     DEFAULTABOUTTITLE: 'Tentang Kami'
@@ -209,10 +210,11 @@ id:
     has_one_Parent: Induk
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Laman Tertaut'
+    CLASS_DESCRIPTION: 'Tampilkan konten laman lain'
     DESCRIPTION: 'Tampilkan konten laman lain'
     HEADER: 'Ini adalah laman virtual'
     HEADERWITHLINK: 'Ini adalah laman virtual dengan konten salinan dari "{title}" ({link})'
-    PLURALNAME: 'Laman Dasar'
+    PLURALNAME: 'Laman Virtual'
     PageTypNotAllowedOnRoot: 'Laman asli jenis "{type}" tidak dibolehkan pada tingkat atas untuk laman virtual ini'
     SINGULARNAME: 'Laman Virtual'
   SilverStripe\CMS\Reports\BrokenFilesReport:

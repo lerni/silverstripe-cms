@@ -152,11 +152,12 @@ sl:
     HelpChars: 'Posebni znaki so samodejno spremenjeni ali odstranjeni.'
     OK: 'V redu'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Uporabnik bo preusmerjen na stran s tega spletišča ali na poljuben spletni naslov.'
     DESCRIPTION: 'Uporabnik bo preusmerjen na stran s tega spletišča ali na poljuben spletni naslov.'
     FILE: Datoteka
     HEADER: 'Ta stran bo preusmerila uporabnike na drugo stran'
     OTHERURL: 'URL druge spletne strani'
-    PLURALNAME: 'Izvorna stran'
+    PLURALNAME: 'Preusmeritvene strani'
     PLURALS:
       few: '{count} izvornih strani'
       one: 'Izvorna stran'
@@ -193,6 +194,7 @@ sl:
     BUTTONSAVEPUBLISH: Objavi
     BUTTONUNPUBLISH: 'Umakni iz objave'
     BUTTONUNPUBLISHDESC: 'Umakni to stran iz objave'
+    CLASS_DESCRIPTION: 'Splošna stran'
     Comments: Komentarji
     Content: Vsebina
     DEFAULTABOUTCONTENT: '<p>To stran lahko napolnite z lastno vsebino ali pa jo izbrišete in ustvarite novo.</p>'
@@ -339,11 +341,12 @@ sl:
     many_many_LinkTracking: 'Spremljanje povezav'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Povezana stran'
+    CLASS_DESCRIPTION: 'Prikaže vsebino, ki je vnesena na drugi strani'
     DESCRIPTION: 'Prikaže vsebino, ki je vnesena na drugi strani'
     EditLink: uredi
     HEADER: 'To je navidezna stran'
     HEADERWITHLINK: 'To je virtualna stran, ki vsebino črpa iz strani "{title}" ({link})'
-    PLURALNAME: 'Izvorna stran'
+    PLURALNAME: 'Virtualne strani'
     PLURALS:
       few: '{count} izvornih strani'
       one: 'Izvorna stran'

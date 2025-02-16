@@ -112,6 +112,7 @@ he_IL:
     BUTTONSAVEPUBLISH: פרסום
     BUTTONUNPUBLISH: 'ביטול הפרסום'
     BUTTONUNPUBLISHDESC: 'הסרת עמוד זה מהאתר שפורסם'
+    CLASS_DESCRIPTION: 'דף תוכן גנרי'
     Comments: תגובות
     Content: תוכן
     DEFAULTABOUTTITLE: 'על אודותינו'
@@ -173,6 +174,7 @@ he_IL:
     many_many_ImageTracking: 'מעקב אחר תמונה'
     many_many_LinkTracking: 'מעקב אחר קישורים'
   SilverStripe\CMS\Model\VirtualPage:
+    CLASS_DESCRIPTION: 'הצגת תוכן של עמוד אחר'
     DESCRIPTION: 'הצגת תוכן של עמוד אחר'
     HEADER: 'זהו עמוד וירטואלי'
     PageTypNotAllowedOnRoot: 'סוג העמוד המקורי „{type}“ אינו מורשה ברמת העל של עמוד וירטואלי זה'

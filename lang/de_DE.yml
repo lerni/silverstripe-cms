@@ -44,6 +44,7 @@ de_DE:
   SilverStripe\CMS\Model\SiteTree:
     BUTTONSAVEPUBLISH: Veröffentlichen
     BUTTONUNPUBLISH: 'Veröffentlichung zurücknehmen'
+    CLASS_DESCRIPTION: 'Fügt ein anpassbares Formular hinzu'
     DESCRIPTION: 'Fügt ein anpassbares Formular hinzu'
     PAGETYPE: Seitentyp
     PLURALNAME: Seiten

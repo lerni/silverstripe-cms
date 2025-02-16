@@ -145,11 +145,12 @@ es:
     HelpChars: 'Los caracteres especiales son automáticamente convertidos o eliminados.'
     OK: Aceptar
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Redirecciona a una página interna o a una URL externa'
     DESCRIPTION: 'Redirecciona a una página interna o a una URL externa'
     FILE: Archivo
     HEADER: 'Esta página redireccionará a los usuarios a otra página'
     OTHERURL: 'Otra dirección URL de un sitio web'
-    PLURALNAME: 'Páginas base'
+    PLURALNAME: 'Páginas de redirección'
     PLURALS:
       one: 'Una Página de redirección'
       other: '{count} Páginas de redirección'
@@ -179,6 +180,7 @@ es:
     BUTTONSAVEPUBLISH: Publicar
     BUTTONUNPUBLISH: 'Sin Publicar'
     BUTTONUNPUBLISHDESC: 'Elimine esta página del sitio publicado'
+    CLASS_DESCRIPTION: 'Página de contenido genérico'
     Comments: Comentarios
     Content: Contenido
     DEFAULTABOUTCONTENT: '<p>Puede llenar esta página con su propio contenido, o eliminarla y crear sus propias páginas.</p>'
@@ -268,11 +270,12 @@ es:
     has_one_Parent: Padre
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: Seleccionar
+    CLASS_DESCRIPTION: 'Muestra el contenido de otra página'
     DESCRIPTION: 'Muestra el contenido de otra página'
     EditLink: Editar
     HEADER: 'Esta es una página virtual'
     HEADERWITHLINK: 'Título con link'
-    PLURALNAME: 'Páginas base'
+    PLURALNAME: 'Páginas virtuales'
     PLURALS:
       one: 'Una Página Virtuales'
       other: '{count} Páginas Virtuales'

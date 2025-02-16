@@ -151,11 +151,12 @@ pl:
     Edit: Edytuj
     HelpChars: 'Znaki specjalne są automatycznie konwertowane lub usuwane.'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Przekierowuje do wskazanej wewnętrznej strony'
     DESCRIPTION: 'Przekierowuje do wskazanej wewnętrznej strony'
     FILE: Plik
     HEADER: 'Ta strona przeniesie użytkowników na inną stronę'
     OTHERURL: 'Adres URL innej strony'
-    PLURALNAME: 'Strony bazowe'
+    PLURALNAME: 'Strony przekierowujące'
     PLURALS:
       few: 'Stron przekierowujących {count}'
       many: 'Stron przekierowujących {count}'
@@ -192,6 +193,7 @@ pl:
     BUTTONSAVEPUBLISH: Opublikuj
     BUTTONUNPUBLISH: Nieopublikowane
     BUTTONUNPUBLISHDESC: 'Usuń tę stronę z opublikowanej witryny'
+    CLASS_DESCRIPTION: 'Zwykła strona'
     Comments: Komentarze
     Content: Zawartość
     DEFAULTABOUTCONTENT: '<p>Możesz wypełnić tę stronę własną treścią, usunąć ją i tworzyć własne strony.<br /></p>'
@@ -302,11 +304,12 @@ pl:
     SINGULARNAME: Strony
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Linkowana strona'
+    CLASS_DESCRIPTION: 'Wyświetla zawartość innej strony'
     DESCRIPTION: 'Wyświetla zawartość innej strony'
     EditLink: edytuj
     HEADER: 'To jest wirtualna strona'
     HEADERWITHLINK: "Strona wirtualna odzwierciedlająca treść\_\"{title}\" ({link})"
-    PLURALNAME: 'Podstawowe strony'
+    PLURALNAME: 'Strony wirtualne'
     PLURALS:
       few: 'Wirtualnych stron {count}'
       many: 'Wirtualnych stron {count}'
