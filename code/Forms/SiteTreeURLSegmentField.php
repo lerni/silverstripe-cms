@@ -42,7 +42,7 @@ class SiteTreeURLSegmentField extends TextField
         'suggest'
     ];
 
-    public function Value()
+    public function getFormattedValue(): mixed
     {
         return rawurldecode($this->value ?? '');
     }
@@ -96,8 +96,8 @@ class SiteTreeURLSegmentField extends TextField
     public function getPage()
     {
         $idField = $this->getForm()->Fields()->dataFieldByName('ID');
-        return ($idField && $idField->Value())
-            ? SiteTree::get()->byID($idField->Value())
+        return ($idField && $idField->getValue())
+            ? SiteTree::get()->byID($idField->getValue())
             : SiteTree::singleton();
     }
 
@@ -171,7 +171,7 @@ class SiteTreeURLSegmentField extends TextField
 
     public function getURL()
     {
-        return Controller::join_links($this->getURLPrefix(), $this->Value(), $this->getURLSuffix());
+        return Controller::join_links($this->getURLPrefix(), $this->getValue(), $this->getURLSuffix());
     }
 
     public function performReadonlyTransformation()

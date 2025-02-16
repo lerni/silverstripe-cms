@@ -147,6 +147,7 @@ da:
     Edit: Rediger
     HelpChars: 'Specialkarakterer bliver automatisk konverteret eller fjernet.'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Omdirigerer til en side eller en ekstern URL'
     DESCRIPTION: 'Omdirigerer til en side eller en ekstern URL'
     HEADER: 'Denne side omdirigerer besøgende til en anden side'
     OTHERURL: 'Andet websteds URL'
@@ -179,6 +180,7 @@ da:
     BUTTONSAVEPUBLISH: Udgiv
     BUTTONUNPUBLISH: 'Annuller udgivelse'
     BUTTONUNPUBLISHDESC: 'Fjern denne side fra det udgivne websted'
+    CLASS_DESCRIPTION: 'Standard indholdsside'
     Comments: Kommentarer
     Content: Indhold
     DEFAULTABOUTCONTENT: '<p>Du kan udfylde denne side med dit eget indhold, eller slette den og oprette dine egne sider.</p>'
@@ -275,6 +277,7 @@ da:
     SINGULARNAME: 'Sidetræ link'
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Linket side'
+    CLASS_DESCRIPTION: 'Viser indholdet fra en anden side'
     DESCRIPTION: 'Viser indholdet fra en anden side'
     EditLink: rediger
     HEADER: 'Dette er en virtuel side'

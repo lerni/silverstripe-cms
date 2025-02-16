@@ -127,6 +127,7 @@ ro:
     BUTTONSAVEPUBLISH: Publicare
     BUTTONUNPUBLISH: Ascunde
     BUTTONUNPUBLISHDESC: 'Șterge pagina din site-ul publicat'
+    CLASS_DESCRIPTION: 'Pagina cu conținut generic '
     Comments: Comentarii
     Content: Continut
     DEFAULTABOUTTITLE: 'Despre Noi'
@@ -198,6 +199,7 @@ ro:
     has_one_Parent: Părinte
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Pagina referință'
+    CLASS_DESCRIPTION: 'Afișează conținutul altei pagini'
     DESCRIPTION: 'Afișează conținutul altei pagini'
     EditLink: editare
     HEADER: 'Aceasta este o pagină virtuală '

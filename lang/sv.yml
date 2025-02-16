@@ -148,11 +148,12 @@ sv:
     Edit: Redigera
     HelpChars: 'Specialtecken konverteras eller tas bort'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Omdirigerar till en annan intern eller extern sida'
     DESCRIPTION: 'Omdirigerar till en annan intern eller extern sida'
     FILE: Fil
     HEADER: 'Den här sidan omdirigerar användare till en annan sida'
     OTHERURL: 'Andra sidans URL'
-    PLURALNAME: Bas-sidor
+    PLURALNAME: 'Omdirigerings sidor'
     PLURALS:
       one: 'En omdirigeringssida'
       other: '{count} omdirigerings-sidor'
@@ -182,6 +183,7 @@ sv:
     BUTTONSAVEPUBLISH: Publicera
     BUTTONUNPUBLISH: Avpublicera
     BUTTONUNPUBLISHDESC: 'Ta bort den här sidan från den publicerade sajten'
+    CLASS_DESCRIPTION: 'Generisk innehållssida'
     Comments: Kommentarer
     Content: Innehåll
     DEFAULTABOUTCONTENT: '<p>Du kan fylla den här sidan med ditt eget innehåll, eller radera den och skapa dina egna sidor.<br/></p>'
@@ -272,11 +274,12 @@ sv:
     has_one_Parent: Förälder
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Länkad sida'
+    CLASS_DESCRIPTION: 'Visar innehåll från en annan sida'
     DESCRIPTION: 'Visar innehåll från en annan sida'
     EditLink: redigera
     HEADER: 'Det här är en virutell sida'
     HEADERWITHLINK: 'Det här är en virtuell sida som kopierar innehållet från "{title}" ({link})'
-    PLURALNAME: Bas-sidor
+    PLURALNAME: 'Virtuella sidor'
     PLURALS:
       one: 'En virtuell sida'
       other: '{count} Virtuella sidor'

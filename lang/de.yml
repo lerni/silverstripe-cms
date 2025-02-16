@@ -151,11 +151,12 @@ de:
     Edit: Bearbeiten
     HelpChars: 'Sonderzeichen werden automatisch umgewandelt oder entfernt.'
   SilverStripe\CMS\Model\RedirectorPage:
+    CLASS_DESCRIPTION: 'Leitet zu einer anderen internen oder externen Seite weiter'
     DESCRIPTION: 'Leitet zu einer anderen internen oder externen Seite weiter'
     FILE: Datei
     HEADER: 'Diese Seite wird Nutzer auf eine andere Seite weiterleiten'
     OTHERURL: 'Andere Webseiten URL'
-    PLURALNAME: 'Basis Seiten'
+    PLURALNAME: Weiterleitungsseiten
     PLURALS:
       one: 'Eine Weiterleitungsseite'
       other: '{count} Basisseiten'
@@ -190,6 +191,7 @@ de:
     BUTTONSAVEPUBLISH: Veröffentlichen
     BUTTONUNPUBLISH: 'Veröffentlichung zurücknehmen'
     BUTTONUNPUBLISHDESC: 'Entferne diese Seite aus der veröffentlichten Website'
+    CLASS_DESCRIPTION: 'Allgemeine Inhaltsseite'
     Comments: Kommentare
     Content: Inhalt
     DEFAULTABOUTCONTENT: '<p>Sie können diese Seite mit Ihren eigenen Inhalten füllen oder löschen.</p>'
@@ -311,11 +313,12 @@ de:
     many_many_LinkTracking: Link-Verfolgung
   SilverStripe\CMS\Model\VirtualPage:
     CHOOSE: 'Verknüpfte Seite'
+    CLASS_DESCRIPTION: 'Zeigt den Inhalt einer anderen Seite an'
     DESCRIPTION: 'Zeigt den Inhalt einer anderen Seite an'
     EditLink: Bearbeiten
     HEADER: 'Dies ist eine virtuelle Seite'
     HEADERWITHLINK: 'Dies ist eine virtuelle Seite, die den Inhalt von "{title}" ({link}) kopiert'
-    PLURALNAME: 'Basis Seiten'
+    PLURALNAME: 'Virtuelle Seiten'
     PLURALS:
       one: 'Eine Virtuelle Seite'
       other: '{count} Basisseiten'
