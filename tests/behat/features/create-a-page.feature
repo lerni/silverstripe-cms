@@ -5,7 +5,8 @@ Feature: Create a page
   So that I can grow my website
 
   Background:
-    Given a "page" "MyPage"
+    Given I add an extension "SilverStripe\BehatExtension\Extensions\ActivateSudoModeServiceExtension" to the "SilverStripe\Security\SudoMode\SudoModeService" class
+    And a "page" "MyPage"
     And a "virtual page" "MyVirtualPage"
     And the "group" "EDITOR" has permissions "Access to 'Pages' section"
 
