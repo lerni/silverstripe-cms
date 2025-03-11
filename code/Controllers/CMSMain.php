@@ -1436,6 +1436,7 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
                 'Warning: This record will be unpublished before being sent to the archive.\n\nAre you sure you want to proceed?'
             );
         }
+        $this->extend('updateArchiveWarningMessage', $archiveWarningMsg, $descendants, $record);
 
         return $archiveWarningMsg;
     }
