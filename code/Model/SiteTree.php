@@ -2066,8 +2066,7 @@ class SiteTree extends DataObject implements PermissionProvider, i18nEntityProvi
                         _t(__CLASS__.'.VIEWERMEMBERS', "Viewer Users"),
                         Member::get(),
                     )
-                        ->setIsLazyLoaded(true)
-                        ->setUseSearchContext(true),
+                        ->setIsLazyLoaded(true),
                     $editorsOptionsField = new OptionsetField(
                         "CanEditType",
                         _t(__CLASS__.'.EDITHEADER', "Who can edit this page?")
@@ -2083,7 +2082,6 @@ class SiteTree extends DataObject implements PermissionProvider, i18nEntityProvi
                         Member::get()
                     )
                         ->setIsLazyLoaded(true)
-                        ->setUseSearchContext(true)
                 )
             )
         );
