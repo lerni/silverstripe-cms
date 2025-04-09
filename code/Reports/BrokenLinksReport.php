@@ -14,6 +14,7 @@ use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Reports\Report;
 use SilverStripe\Versioned\Versioned;
+use SilverStripe\Core\Convert;
 
 /**
  * Content side-report listing pages with broken links
@@ -140,8 +141,8 @@ class BrokenLinksReport extends Report
                 'title' => _t(__CLASS__ . '.ColumnURL', 'URL'),
                 'formatting' => function ($value, $item) {
                     /** @var SiteTree $item */
-                    $liveLink = $item->AbsoluteLiveLink;
-                    $stageLink = $item->AbsoluteLink();
+                    $liveLink = Convert::raw2xml($item->AbsoluteLiveLink);
+                    $stageLink = Convert::raw2xml($item->AbsoluteLink());
                     return sprintf(
                         '%s <a href="%s">%s</a>',
                         $stageLink,
