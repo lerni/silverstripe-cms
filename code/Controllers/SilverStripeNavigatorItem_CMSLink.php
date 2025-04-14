@@ -2,7 +2,7 @@
 
 namespace SilverStripe\CMS\Controllers;
 
-use SilverStripe\Admin\LeftAndMain;
+use SilverStripe\Admin\AdminController;
 use SilverStripe\Admin\Navigator\SilverStripeNavigatorItem;
 use SilverStripe\CMS\Model\RedirectorPage;
 use SilverStripe\Control\Controller;
@@ -33,14 +33,14 @@ class SilverStripeNavigatorItem_CMSLink extends SilverStripeNavigatorItem
 
     public function isActive()
     {
-        return (Controller::curr() instanceof LeftAndMain);
+        return (Controller::curr() instanceof AdminController);
     }
 
     public function canView($member = null)
     {
         return (
             // Don't show in CMS
-            !(Controller::curr() instanceof LeftAndMain)
+            !(Controller::curr() instanceof AdminController)
             // Don't follow redirects in preview, they break the CMS editing form
             && !($this->record instanceof RedirectorPage)
         );
