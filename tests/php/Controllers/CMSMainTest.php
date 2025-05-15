@@ -24,6 +24,7 @@ use SilverStripe\Control\HTTPResponse_Exception;
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Core\Convert;
+use SilverStripe\Core\Extension;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Dev\CSSContentParser;
 use SilverStripe\Dev\FunctionalTest;
@@ -876,5 +877,32 @@ class CMSMainTest extends FunctionalTest
             $this->expectNotToPerformAssertions();
         }
         $initReflection->invoke($cms);
+    }
+
+    public static function provideTreeAsULPrepopulateOptions(): array
+    {
+        return [
+            'base-class-config' => [
+                'siteTreeConfig' => true,
+                'expected' => 'mySiteTreeMethod',
+            ],
+            'extension-config' => [
+                'siteTreeConfig' => false,
+                'expected' => 'getChildrenForTree',
+            ],
+        ];
+    }
+
+    #[DataProvider('provideTreeAsULPrepopulateOptions')]
+    public function testTreeAsULPrepopulateOptions(bool $siteTreeConfig, string $expected): void
+    {
+        $cmsMain = new CMSMain();
+        if ($siteTreeConfig) {
+            SiteTree::config()->set('tree_children_method', 'mySiteTreeMethod');
+        }
+        $refl = new ReflectionMethod($cmsMain, 'getTreeAsULPrepopulateOptions');
+        $refl->setAccessible(true);
+        $actual = $refl->invoke($cmsMain, SiteTree::class)['childrenMethod'];
+        $this->assertSame($expected, $actual);
     }
 }
