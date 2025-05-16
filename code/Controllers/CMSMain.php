@@ -490,15 +490,25 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
     public function TreeAsUL()
     {
         $modelClass = $this->getModelClass();
-
-        DataObject::singleton($modelClass)->prepopulateTreeDataCache(null, [
-            'childrenMethod' => 'AllChildrenIncludingDeleted',
-            'numChildrenMethod' => 'numChildren',
-        ]);
-
+        $options = $this->getTreeAsULPrepopulateOptions($modelClass);
+        DataObject::singleton($modelClass)->prepopulateTreeDataCache(null, $options);
         $html = $this->getTreeFor($modelClass);
         $this->extend('updateTreeAsUL', $html);
         return $html;
+    }
+
+    /**
+     * Get the options used for the call to Hierarchy::prepopulateTreeDataCache()
+     */
+    private function getTreeAsULPrepopulateOptions(string $modelClass)
+    {
+        /** @var DataObject&Hierarchy $obj */
+        $obj = DataObject::singleton($modelClass);
+        $baseClass = $obj->getHierarchyBaseClass();
+        return [
+            'childrenMethod' => $baseClass::config()->get('tree_children_method'),
+            'numChildrenMethod' => 'numChildren',
+        ];
     }
 
     /**
