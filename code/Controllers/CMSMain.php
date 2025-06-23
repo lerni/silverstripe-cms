@@ -1192,8 +1192,18 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
             'class-' . Convert::raw2htmlid(get_class($record)),
         ];
         $record->invokeWithExtensions('updateTreeIconClasses', $iconClasses);
-        $titleText = Convert::raw2xml(str_replace(["\n","\r"], '', $record->getTreeTitle()));
-        if (!trim($titleText)) {
+        $titleText = $record->getTreeTitle();
+        // Hierarchy::getTreeTitle() will call Convert::raw2xml(), though this may have been
+        // overriden by another method that doesn't call this
+        // Check to see if it was converted first by calling the xml2raw() to before calling
+        // raw2xml() to ensure we don't double convert and end up with "&amp;amp;"
+        $wasChanged = Convert::xml2raw($titleText) !== $titleText;
+        if (!$wasChanged) {
+            $titleText = Convert::raw2xml($titleText);
+        }
+        $titleText = str_replace(["\n","\r"], '', $titleText);
+        $titleText = trim($titleText);
+        if ($titleText === '') {
             $titleText = _t(__CLASS__ . '.TREE_NO_TITLE', '(no title)');
         }
         $treeTitle = sprintf(
@@ -1668,9 +1678,11 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
         // Build the list of candidate children
         $cache = $this->getCreatableChildrenCache();
         $cacheKey = $this->generateChildrenCacheKey();
-        $children = $cache->get($cacheKey, []);
+        $children = [];
+        if ($cache !== null) {
+            $children = $cache->get($cacheKey, []);
+        }
         $modelClass = $this->getModelClass();
-
         if (!$children || !isset($children[$modelClass][$record->ID])) {
             $children[$modelClass][$record->ID] = [];
             $candidates = $this->getAllowedSubClasses();
@@ -1685,7 +1697,9 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
                     ];
                 }
             }
-            $cache->set($cacheKey, $children);
+            if ($cache !== null) {
+                $cache->set($cacheKey, $children);
+            }
         }
 
         return $children[$modelClass][$record->ID];
