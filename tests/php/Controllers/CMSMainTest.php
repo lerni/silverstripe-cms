@@ -39,6 +39,8 @@ use SilverStripe\SiteConfig\SiteConfig;
 use SilverStripe\Versioned\RecursivePublishable;
 use SilverStripe\Versioned\Versioned;
 
+use function Embed\html;
+
 class CMSMainTest extends FunctionalTest
 {
     protected static $fixture_file = 'CMSMainTest.yml';
@@ -903,6 +905,46 @@ class CMSMainTest extends FunctionalTest
         $refl = new ReflectionMethod($cmsMain, 'getTreeAsULPrepopulateOptions');
         $refl->setAccessible(true);
         $actual = $refl->invoke($cmsMain, SiteTree::class)['childrenMethod'];
+        $this->assertSame($expected, $actual);
+    }
+
+    public static function provideGetRecordTreeMarkup(): array
+    {
+        return [
+            'no-specials' => [
+                'title' => 'About Us',
+                'expected' => 'About Us',
+            ],
+            'amp' => [
+                'title' => 'About & Us',
+                'expected' => 'About &amp; Us',
+            ],
+            'single-quote' => [
+                'title' => 'About \' Us',
+                'expected' => 'About &#039; Us',
+            ],
+            'double-quote' => [
+                'title' => 'About " Us',
+                'expected' => 'About &quot; Us',
+            ],
+            'less-than' => [
+                'title' => 'About < Us',
+                'expected' => 'About &lt; Us',
+            ],
+            'greater-than' => [
+                'title' => 'About > Us',
+                'expected' => 'About &gt; Us',
+            ],
+        ];
+    }
+
+    #[DataProvider('provideGetRecordTreeMarkup')]
+    public function testGetRecordTreeMarkup(string $title, string $expected): void
+    {
+        $page = new SiteTree(['Title' => $title]);
+        $cmsMain = new CMSMain();
+        $html = $cmsMain->getRecordTreeMarkup($page);
+        $actual = strip_tags($html);
         $this->assertSame($expected, $actual);
     }
 }
