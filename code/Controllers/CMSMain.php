@@ -742,7 +742,7 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
 
         // Check record exists in the DB
         /** @var DataObject&Hierarchy $node */
-        $node = DataObject::get_by_id($className, $id);
+        $node = DataObject::get($className)->setUseCache(true)->byID($id);
         if (!$node) {
             $this->httpError(
                 500,
@@ -1265,7 +1265,7 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
             }
             $record = Versioned::get_version($modelClass, $id, $versionID);
         } else {
-            $record = DataObject::get_by_id($modelClass, $id);
+            $record = DataObject::get($modelClass)->setUseCache(true)->byID($id);
         }
 
         // Then, try getting a record from the live site
@@ -1274,7 +1274,7 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
             Versioned::set_stage(Versioned::LIVE);
             DataObject::singleton($modelClass)->flushCache();
 
-            $record = DataObject::get_by_id($modelClass, $id);
+            $record = DataObject::get($modelClass)->setUseCache(true)->byID($id);
         }
 
         // Then, try getting a deleted record
@@ -1731,7 +1731,7 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
         // Existing or new record?
         $id = $data['ID'];
         if (substr($id ?? '', 0, 3) != 'new') {
-            $record = DataObject::get_by_id($className, $id);
+            $record = DataObject::get($className)->setUseCache(true)->byID($id);
             // Check edit permissions
             if ($record && !$record->canEdit()) {
                 return Security::permissionFailure($this);
@@ -1996,7 +1996,7 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
     public function unpublish(array $data, Form $form): HTTPResponse
     {
         $className = $this->getModelClass();
-        $record = DataObject::get_by_id($className, $data['ID']);
+        $record = DataObject::get($className)->setUseCache(true)->byID($data['ID']);
 
         if (!$record->hasExtension(Versioned::class)) {
             throw new HTTPResponse_Exception(get_class($record) . ' record cannot be unpublished.', 400);
