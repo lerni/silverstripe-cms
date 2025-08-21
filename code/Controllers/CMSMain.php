@@ -2181,9 +2181,10 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
         }
 
         if (($id = $this->urlParams['ID']) && is_numeric($id)) {
+            $modelClass = $this->getModelClass();
             /** @var DataObject&Hierarchy $record */
-            $record = DataObject::get($this->getModelClass())->byID($id);
-            if ($record && !$record->canCreate(null, ['Parent' => $record->Parent()])) {
+            $record = DataObject::get($modelClass)->byID($id);
+            if ($record && !$record->canCreate(null, ['Parent' => $record->getParent() ?? $modelClass::create()])) {
                 return Security::permissionFailure($this);
             }
             if (!$record || !$record->ID) {
@@ -2227,9 +2228,10 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
         }
         Environment::increaseTimeLimitTo();
         if (($id = $this->urlParams['ID']) && is_numeric($id)) {
+            $modelClass = $this->getModelClass();
             /** @var DataObject&Hierarchy $record */
-            $record = DataObject::get($this->getModelClass())->byID($id);
-            if ($record && !$record->canCreate(null, ['Parent' => $record->Parent()])) {
+            $record = DataObject::get($modelClass)->byID($id);
+            if ($record && !$record->canCreate(null, ['Parent' => $record->getParent() ?? $modelClass::create()])) {
                 return Security::permissionFailure($this);
             }
             if (!$record || !$record->ID) {
