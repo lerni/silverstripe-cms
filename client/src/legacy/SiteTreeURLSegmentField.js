@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import i18n from 'i18n';
 
 $.entwine('ss', function($) {
 	/**
@@ -25,7 +26,8 @@ $.entwine('ss', function($) {
 
 		redraw: function() {
 			var field = this.find(':text'),
-				url = decodeURI(field.data('prefix') + field.val()),
+				val = field.val(),
+				url = decodeURI(field.data('prefix') + val),
 				previewUrl = url;
 
 			// Truncate URL if required (ignoring the suffix, retaining the full value)
@@ -34,7 +36,15 @@ $.entwine('ss', function($) {
 			}
 
 			// Transfer current value to holder
-			this.find('.URL-link').attr('href', encodeURI(url + field.data('suffix'))).text(previewUrl);
+			var $link = this.find('.URL-link');
+			$link.attr('href', encodeURI(url + field.data('suffix'))).text(previewUrl);
+			$link.attr('aria-label', i18n.inject(
+				i18n._t(
+					'SilverStripe\\CMS\\Forms\\SiteTreeURLSegmentField.ViewDraftFor',
+					'View the draft page for URL segment {segment}',
+				),
+				{ segment: val }
+			));
 		},
 
 		/**
