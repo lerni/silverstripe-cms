@@ -1,5 +1,9 @@
 <div class="preview-holder">
-    <a class="URL-link" href="$URL" target="_blank">
+    <a class="URL-link"
+        href="$URL"
+        target="_blank"
+        title="<%t SilverStripe\\CMS\\Forms\\SiteTreeURLSegmentField.ViewDraft 'View the draft page' %>">
+        <%-- An aria-label attribute is dynamically added in SiteTreeURLSegmentField.js --%>
         $URL
     </a>
     <% if not $IsReadonly %>
