@@ -2171,4 +2171,17 @@ class SiteTreeTest extends SapphireTest
         $this->expectNotToPerformAssertions();
         $page->onAfterRevertToLive();
     }
+
+    public function testAnchorsOnPage()
+    {
+        // Make sure Anchors are extracted from content, but shortcode tags are ignored
+        $page = new SiteTree();
+        $page->Content = '<h1 id="heading1">Heading 1</h1><h2 id=heading2>Heading 2</h2>[image src="/assets/sample" id="1" class="ss-htmleditorfield-file image"]';
+        $page->write();
+
+        $anchors = $page->getAnchorsOnPage();
+        $this->assertCount(2, $anchors);
+        $this->assertEquals('heading1', $anchors[0]);
+        $this->assertEquals('heading2', $anchors[1]);
+    }
 }
