@@ -2393,8 +2393,8 @@ class SiteTree extends DataObject implements PermissionProvider, i18nEntityProvi
         // Force live sort order to match stage sort order
         $sql = sprintf(
             'UPDATE "%2$s"
-			SET "Sort" = (SELECT "%1$s"."Sort" FROM "%1$s" WHERE "%2$s"."ID" = "%1$s"."ID")
-			WHERE EXISTS (SELECT "%1$s"."Sort" FROM "%1$s" WHERE "%2$s"."ID" = "%1$s"."ID") AND "ParentID" = ?',
+            SET "Sort" = (SELECT "%1$s"."Sort" FROM "%1$s" WHERE "%2$s"."ID" = "%1$s"."ID")
+            WHERE EXISTS (SELECT "%1$s"."Sort" FROM "%1$s" WHERE "%2$s"."ID" = "%1$s"."ID") AND "ParentID" = ?',
             $this->baseTable(),
             $this->stageTable($this->baseTable(), Versioned::LIVE)
         );
@@ -2830,9 +2830,22 @@ class SiteTree extends DataObject implements PermissionProvider, i18nEntityProvi
      */
     public function getAnchorsOnPage()
     {
+        $content = $this->Content ?? '';
+        
+        // Shortcodes may contain name/id attributes, they mess up the parsing below
+        // we replace them with their content first
+        // Note: We don't use ShortcodeParser::parse() here as that would execute the shortcodes
+        // which may have performance and side effects
+        $tags = ShortcodeParser::get_active()->extractTags($content);
+        
+        // replace any tags found with their content
+        foreach ($tags as $tag) {
+            $content = str_replace($tag['text'], $tag['content'], $content);
+        }
+
         $parseSuccess = preg_match_all(
             "/\\s+(name|id)\\s*=\\s*([\"'])([^\\2\\s>]*?)\\2|\\s+(name|id)\\s*=\\s*([^\"']+)[\\s +>]/im",
-            $this->Content ?? '',
+            $content ?? '',
             $matches
         );
 
