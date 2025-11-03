@@ -1,7 +1,21 @@
 de:
   SilverStripe\Admin\LeftAndMain:
+    ARCHIVED_RECORD: '{name} "{title}" archiviert'
+    AddNew: '{name} neu hinzufügen'
+    ArchiveWarning: 'Warnung: Die Veröffentlichung dieses Eintrages wird zurückgenommen, bevor er archiviert wird.\n\nSind Sie sicher, dass Sie fortfahren wollen?'
+    ArchiveWarningWithChildren: 'Warnung: Die Veröffentlichung dieses Eintrages und aller untergeordneten Einträge wird zurückgenommen, bevor er archiviert wird.\n\nSind Sie sicher, dass Sie fortfahren wollen?'
+    CREATED_RECORD: '{name} "{title}" erstellt'
+    DELETED_RECORD: '{name} "{title}" gelöscht'
+    DUPLICATED_RECORD: '{name} "{title}" dupliziert'
+    DUPLICATED_RECORD_WITH_CHILDREN: '{name} "{title}" und alles Untergeordnete dupliziert '
+    NEW_RECORD: '{recordtype} hinzufügen'
+    NewRecord: '{name} hinzufügen'
+    PUBLISHED_RECORD: '{name} "{title}" veröffentlicht'
+    RESTORED_RECORD: '{name} "{title}" wiederhergestellt'
     ROLLEDBACK_PUBLISHED: 'Veröffentlichte Version wiederhergestellt'
     ROLLEDBACK_VERSION: 'Version #{version} wiederhergestellt.'
+    SAVED_RECORD: '{name} "{title}" gespeichert'
+    UNPUBLISHED_RECORD: 'Veröffentlichung von {name} "{title}" zurückgenommen'
   SilverStripe\CMS\BatchActions\CMSBatchAction_Archive:
     RESULT: '%d Seiten wurden von der Entwurfs-Seite gelöscht und zum Archiv hinzugefügt'
     TITLE: 'Veröffentlichung zurücknehmen und archivieren'
@@ -27,6 +41,8 @@ de:
     ArchiveWarningWithChildren: 'Warnung: Die Veröffentlichung dieser Seite und aller Unterseiten wird zurückgenommen, bevor sie archiviert wird.\n\nSind Sie sicher, dass Sie fortfahren wollen?'
     ArchiveWarningWithChildrenAndCampaigns: 'Warnung: Die Veröffentlichung dieser Seite mitsamt ihrer Unterseiten wird zurückgenommen und automatisch aus den zugehörigen {NumCampaigns} entfernt, bevor sie archiviert wird.\n\nMöchten Sie wirklich fortfahren?'
     CANT_REORGANISE: 'Sie besitzen nicht die benötigten Zugriffsrechte um Seiten der höchsten Ebene zu bearbeiten. Ihre Änderungen wurden nicht gespeichert.'
+    CANT_REORGANISE2: 'Sie besitzen nicht die benötigten Zugriffsrechte, um die Sortierung zu ändern. Ihre Änderung wurde nicht gespeichert.'
+    CANT_REORGANISE_TOPLEVEL: 'Sie besitzen nicht die benötigten Zugriffsrechte, um Einträge der obersten Ebene zu ändern. Ihre Änderung wurde nicht gespeichert.'
     Cancel: Abbrechen
     ChoosePageParentMode: 'Wo soll diese Seite erstellt werden?'
     ChoosePageType: 'Seitentyp auswählen'
@@ -44,15 +60,19 @@ de:
     PAGETYPEOPT: Seitentyp
     PAGETYPE_TITLE: '(Seitentyp: {type}) {title}'
     PLEASESAVE: 'Diese Seite konnte nicht aktualisiert werden weil sie noch nicht gespeichert wurde - bitte speichern.'
+    PLEASESAVE2: 'Bitte Eintrag speichern: Dieser Eintrag konnte nicht aktualisiert werden, weil er noch nicht gespeichert wurde.'
     PUBALLCONFIRM: 'Veröffentlicht jede Seite des Seitenbaumes und kopiert den Inhalt von Entwurf zu Live.'
     PUBALLFUN: '"Alle veröffentlichen"-Funktion'
     PUBALLFUN2: 'Wenn Sie auf diese Schaltfläche klicken, wird auf jede Seite gewechselt und auf "Veröffentlichen" geklickt. Es soll verwendet werden, nachdem umfangreiche Änderungen am Inhalt vorgenommen wurden, z. B. als die Website zum ersten Mal erstellt wurde. Bei großen Websites kann diese Aufgabe möglicherweise nicht vollständig ausgeführt werden. In diesem Fall empfehlen wir, mit Ihren Entwicklern zu sprechen, um eine benutzerdefinierte Aufgabe zu erstellen'
     PUBLISHED: "'{title}' wurde erfolgreich veröffentlicht."
     PUBPAGES: 'Abgeschlossen: {count} Seiten wurden veröffentlicht'
     PageAdded: 'Seite erfolgreich erstellt'
+    RECORDNOTEXISTS: 'Dieser Eintrag existiert nicht'
+    RECORD_TYPE_TITLE: '(Eintragsart: {type}) {title}'
     REMOVEDPAGE: "'{title}' wurde von der veröffentlichten Site entfernt"
     REMOVEDPAGEFROMDRAFT: "Lösche '{title}' von der Entwurfs-Site"
     REORGANISATIONSUCCESSFUL: 'Der Seitenbaum wurde erfolgreich sortiert'
+    REORGANISATIONSUCCESSFUL2: 'Die Reihenfolge wurde erfolgreich geändert.'
     RESTORE: 'Entwurf wiederherstellen'
     RESTORED: "'{title}' wurde wiederhergestellt"
     RESTORE_DESC: 'Entwurf aus archivierter Version wiederherstellen'
@@ -66,6 +86,8 @@ de:
     SEARCHRESULTS: Suchergebnisse
     SHOW_AS_LIST: 'als Liste zeigen'
     TOO_MANY_PAGES: 'Zu viele Seiten'
+    TOO_MANY_RECORDS: 'Zu viele Einträge'
+    TREE_NO_TITLE: '(Kein Titel)'
     TabContent: Inhalt
     TabHistory: Verlauf
     TabSettings: Einstellungen
