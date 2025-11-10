@@ -1,7 +1,19 @@
 sl:
   SilverStripe\Admin\LeftAndMain:
+    ARCHIVED_RECORD: 'Arhiviral {name} "{title}" '
+    AddNew: Dodaj
+    ArchiveWarning: 'Opozorilo: Zapis bo pred arhiviranjem umaknjen iz objave.\n\nŽelite nadaljevati?'
+    ArchiveWarningWithChildren: 'Opozorilo: Zapis in vsi njemu podrejeni zapisi bodo pred arhiviranjem umaknjeni iz objave.\n\nŽelite nadaljevati?'
+    CREATED_RECORD: 'Ustvaril {name} "{title}"'
+    DELETED_RECORD: 'Izbrisal {name} "{title}"'
+    DUPLICATED_RECORD: 'Dupliciral {name} "{title}"'
+    DUPLICATED_RECORD_WITH_CHILDREN: 'Dupliciral {name} "{title}" s podrejenimi elementi'
+    PUBLISHED_RECORD: 'Objavil {name} "{title}"'
+    RESTORED_RECORD: 'Obnovil {name} "{title}"'
     ROLLEDBACK_PUBLISHED: 'Stran smo povrnili iz različice, ki je objavljena.'
     ROLLEDBACK_VERSION: 'Stran smo povrnili iz različice #{version}.'
+    SAVED_RECORD: 'Shranil {name} "{title}"'
+    UNPUBLISHED_RECORD: 'Umaknil {name} "{title}" iz objave '
   SilverStripe\CMS\BatchActions\CMSBatchAction_Archive:
     RESULT: 'Umaknili iz objave in arhivirali smo %d stran/i.'
     TITLE: Arhiviraj
@@ -50,9 +62,11 @@ sl:
     PUBLISHED: "Objavili smo stran '{title}'."
     PUBPAGES: 'Opravljeno: Objavljenih je {count} strani'
     PageAdded: 'Stran je bila uspešno ustvarjena'
+    RECORDNOTEXISTS: 'Ta zapis ne obstaja'
     REMOVEDPAGE: "'{title}' je odstranjena z objavljenega spletnega mesta. "
     REMOVEDPAGEFROMDRAFT: "Vsebina, odstranjena iz osnutka spletnega mesta: '{title}'"
     REORGANISATIONSUCCESSFUL: 'Preuredili smo drevesno strukturo.'
+    REORGANISATIONSUCCESSFUL2: 'Drevesna struktura uspešno preoblikovana'
     RESTORE: 'Obnovi osnutek'
     RESTORED: "Obnovili smo stran '{title}'."
     RESTORE_DESC: 'Obnovi arhivirano različico v osnutek.'
@@ -66,6 +80,8 @@ sl:
     SEARCHRESULTS: 'Rezultati iskanja'
     SHOW_AS_LIST: 'prikaži v obliki seznama'
     TOO_MANY_PAGES: 'Preveč strani'
+    TOO_MANY_RECORDS: 'Preveč zapisov hkrati'
+    TREE_NO_TITLE: '(brez naslova)'
     TabContent: Vsebina
     TabHistory: Zgodovina
     TabSettings: Nastavitve
