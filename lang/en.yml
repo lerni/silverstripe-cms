@@ -186,6 +186,7 @@ en:
     Edit: Edit
     HelpChars: ' Special characters are automatically converted or removed.'
     OK: OK
+    ViewDraft: 'View the draft page'
   SilverStripe\CMS\Model\RedirectorPage:
     CLASS_DESCRIPTION: 'Redirects requests to another location'
     DESCRIPTION: 'Redirects to an internal page or an external URL'
