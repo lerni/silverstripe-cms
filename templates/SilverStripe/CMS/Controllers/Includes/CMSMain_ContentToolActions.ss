@@ -2,7 +2,7 @@
 	<div class="btn-toolbar cms-actions-buttons-row">
         <% if not $TreeIsFiltered %>
             <a class="btn btn-primary cms-content-addpage-button tool-button font-icon-plus" href="$LinkRecordAdd" data-url-addpage="{$LinkRecordAdd('', 'ParentID=%s')}">
-                <%t SilverStripe\Admin\\LeftAndMain.AddNew 'Add new {name}' name=$getRecord('singleton').i18n_singular_name().lowercase %>
+                <%t SilverStripe\Admin\\LeftAndMain.AddNew 'Add new {name}' name=$getRecord('singleton').i18n_singular_name() %>
             </a>
 
             <% if $View == 'Tree' %>
