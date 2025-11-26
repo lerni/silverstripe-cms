@@ -1243,8 +1243,6 @@ class SiteTreeTest extends SapphireTest
     {
         $sitetree = new SiteTree();
         $method = new ReflectionMethod($sitetree, 'getClassDropdown');
-        $method->setAccessible(true);
-
         Security::setCurrentUser(null);
         $this->assertArrayNotHasKey(SiteTreeTest_ClassA::class, $method->invoke($sitetree));
 
@@ -1658,10 +1656,8 @@ class SiteTreeTest extends SapphireTest
         $provider = new EmbedShortcodeProvider();
         $reflector = new \ReflectionClass(EmbedShortcodeProvider::class);
         $method = $reflector->getMethod('getCache');
-        $method->setAccessible(true);
         $cache = $method->invokeArgs($provider, []);
         $method = $reflector->getMethod('deriveCacheKey');
-        $method->setAccessible(true);
         $class = 'leftAlone ss-htmleditorfield-file embed';
         $width = '480';
         $height = '270';
@@ -1957,7 +1953,6 @@ class SiteTreeTest extends SapphireTest
         // Test that method doesn't throw exception
         $this->expectNotToPerformAssertions();
         $method = new ReflectionMethod(SiteTree::class, 'onAfterRevertToLive');
-        $method->setAccessible(true);
         $method->invoke($page);
     }
 
