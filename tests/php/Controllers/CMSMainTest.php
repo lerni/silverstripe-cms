@@ -716,7 +716,6 @@ class CMSMainTest extends FunctionalTest
     {
         $cms = CMSMain::create();
         $reflectionAllowedSubclasses = new ReflectionMethod($cms, 'getAllowedSubClasses');
-        $reflectionAllowedSubclasses->setAccessible(true);
         /** @var Member $user */
         $user = $this->objFromFixture(Member::class, 'rootedituser');
         Security::setCurrentUser($user);
@@ -789,7 +788,6 @@ class CMSMainTest extends FunctionalTest
         // Use injector because CMSMain defines some injectable dependencies
         $cms = CMSMain::create();
         $reflectionMethod = new ReflectionMethod($cms, 'getCreatableSubClasses');
-        $reflectionMethod->setAccessible(true);
 
         $siteTree = new SiteTree();
         $user = $this->objFromFixture(Member::class, 'allcmssectionsuser');
@@ -872,7 +870,6 @@ class CMSMainTest extends FunctionalTest
         // Use injector because CMSMain defines some injectable dependencies
         $cms = CMSMain::create();
         $initReflection = new ReflectionMethod($cms, 'init');
-        $initReflection->setAccessible(true);
         if ($throwsException) {
             $this->expectException(LogicException::class);
         } else {
@@ -903,7 +900,6 @@ class CMSMainTest extends FunctionalTest
             SiteTree::config()->set('tree_children_method', 'mySiteTreeMethod');
         }
         $refl = new ReflectionMethod($cmsMain, 'getTreeAsULPrepopulateOptions');
-        $refl->setAccessible(true);
         $actual = $refl->invoke($cmsMain, SiteTree::class)['childrenMethod'];
         $this->assertSame($expected, $actual);
     }
@@ -952,7 +948,6 @@ class CMSMainTest extends FunctionalTest
     {
         $controller = new CMSMain();
         $reflectionMethod = new ReflectionMethod($controller, 'getArchiveWarningMessage');
-        $reflectionMethod->setAccessible(true);
         $page = new SiteTree(['Title' => 'my page']);
         $page->write();
 
