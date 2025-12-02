@@ -44,7 +44,7 @@ $.entwine('ss', function ($) {
         // Always use treeview when in page edit mode
         viewType = VIEW_TYPE_TREE;
       }
-      const url = this.data(`url-${viewType}`);
+      let url = this.data(`url-${viewType}`);
 
       let clearFiltered = localStorage.getItem('ss.pages-view-filtered');
       if (typeof clearFiltered === 'string' && clearFiltered.toLowerCase() === 'false') {
@@ -55,6 +55,15 @@ $.entwine('ss', function ($) {
       localStorage.setItem('ss.pages-view-filtered', false);
 
       this.data('deferredNoCache', (clearFiltered || viewType === VIEW_TYPE_LIST));
+      
+      // Append current page ID to treeview URL if in page edit mode
+      if (viewType === VIEW_TYPE_TREE) {
+        const pageID = $('.cms-edit-form input[name=ID]').val();
+        if (pageID) {
+          url = `${url}/${pageID}`;
+        }
+      }
+      
       this.data('url', url + location.search);
       this._super();
     }

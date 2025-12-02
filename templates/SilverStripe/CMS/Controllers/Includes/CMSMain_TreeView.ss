@@ -9,7 +9,7 @@ $ExtraTreeTools
 			<%t SilverStripe\CMS\Controllers\CMSMain.TreeFilteredClear 'Clear' %>
 		</a>
 
-		<div class="cms-tree <% if $TreeIsFiltered %>filtered-list<% end_if %>"
+		<nav class="cms-tree <% if $TreeIsFiltered %>filtered-list<% end_if %>" aria-label="<%t SilverStripe\CMS\Controllers\CMSMain.SITE_PAGE_NAVIGATION 'Site Page Navigation' %>"
 			data-url-tree="$LinkWithSearch($Link('getsubtree')).ATT"
 			data-url-savetreenode="$Link('savetreenode').ATT"
 			data-url-updatetreenodes="$Link('updatetreenodes').ATT"
@@ -22,10 +22,10 @@ $ExtraTreeTools
 			data-childfilter="$Link('childfilter').ATT"
 			data-extra-params="SecurityID=$SecurityID.ATT">
 			$TreeAsUL
-        </div>
+        </nav>
     </div>
 <% else %>
-    <div class="cms-tree flexbox-area-grow <% if $TreeIsFiltered %>filtered-list<% end_if %>"
+    <nav class="cms-tree flexbox-area-grow <% if $TreeIsFiltered %>filtered-list<% end_if %>" aria-label="<%t SilverStripe\CMS\Controllers\CMSMain.SITE_PAGE_NAVIGATION 'Site Page Navigation' %>"
 		data-url-tree="$LinkWithSearch($Link('getsubtree')).ATT"
 		data-url-savetreenode="$Link('savetreenode').ATT"
 		data-url-updatetreenodes="$Link('updatetreenodes').ATT"
@@ -38,5 +38,5 @@ $ExtraTreeTools
 		data-childfilter="$Link('childfilter').ATT"
 		data-extra-params="SecurityID=$SecurityID.ATT">
 		$TreeAsUL
-	</div>
+	</nav>
 <% end_if %>

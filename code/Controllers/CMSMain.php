@@ -144,6 +144,7 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
     private static array $url_handlers = [
         'EditForm/$ID' => 'EditForm',
         'GET SearchForm' => 'getSearchForm',
+        'treeview/$ID' => 'treeview',
     ];
 
     private static array $casting = [
@@ -579,9 +580,23 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
      */
     protected function getTreeNodeCustomisations()
     {
-        return function (DataObject $node) {
+        $isFirstPageAssigned = false;
+        $currentRecordID = $this->currentRecordID();
+        $hasCurrentPage = $currentRecordID !== null;
+
+        return function (DataObject $node) use ($currentRecordID, $hasCurrentPage, &$isFirstPageAssigned) {
+            $isCurrentPage = $node->ID === $currentRecordID;
+            $isFirstPage = false;
+            if (!$isFirstPageAssigned) {
+                $isFirstPage = true;
+                $isFirstPageAssigned = true;
+            }
+
             return [
                 'Controller' => $this,
+                'isCurrentPage' => $isCurrentPage,
+                'isFirstPage' => $isFirstPage,
+                'hasCurrentPage' => $hasCurrentPage,
                 'listViewLink' => $this->LinkListViewChildren($node->ID),
                 'rootTitle' => $this->getCMSTreeTitle(),
                 'extraClass' => $this->getTreeNodeClasses($node),
@@ -1486,6 +1501,10 @@ class CMSMain extends LeftAndMain implements CurrentRecordIdentifier, Permission
      */
     public function treeview()
     {
+        $id = $this->getRequest()->param('ID');
+        if ($id) {
+            $this->setCurrentRecordID($id);
+        }
         return $this->renderWith($this->getTemplatesWithSuffix('_TreeView'));
     }
 
