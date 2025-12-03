@@ -3,7 +3,7 @@
         <% if not $TreeIsFiltered %>
             <a class="btn btn-primary cms-content-addpage-button tool-button" href="$LinkRecordAdd" data-url-addpage="{$LinkRecordAdd('', 'ParentID=%s')}">
                 <span class="font-icon-plus" aria-hidden="true"></span>
-                <%t SilverStripe\Admin\\LeftAndMain.AddNew 'Add new {name}' name=$getRecord('singleton').i18n_singular_name().lowercase %>
+                <%t SilverStripe\Admin\\LeftAndMain.AddNew 'Add new {name}' name=$getRecord('singleton').i18n_singular_name() %>
             </a>
 
             <% if $View == 'Tree' %>
