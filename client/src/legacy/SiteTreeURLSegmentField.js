@@ -127,7 +127,7 @@ $.entwine('ss', function($) {
 	$('.field.urlsegment .text').entwine({
     onkeydown: function(e) {
       // Prevent page-level form submission, update this field instead
-      if (e.keyCode === 13) {
+      if (e.key === 'Enter') {
         e.preventDefault();
         this.closest('.field').update();
       }
