@@ -12,8 +12,8 @@ use SilverStripe\Forms\FieldList;
  */
 class DefaultAddPageOptionExtension extends Extension implements TestOnly
 {
-    protected function updatePageOptions(FieldList $fields)
+    protected function updateFields(FieldList $fields)
     {
-        $fields->dataFieldByName('PageType')->setValue(VirtualPage::class);
+        $fields->dataFieldByName('RecordType')->setValue(VirtualPage::class);
     }
 }
