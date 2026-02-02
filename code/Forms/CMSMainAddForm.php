@@ -27,16 +27,19 @@ class CMSMainAddForm extends Form
         parent::__construct($controller, 'AddForm', $this->createFields(), $this->createActions());
         $negotiator = $controller->getResponseNegotiator();
         $this->setHTMLID('Form_AddForm')->setStrictFormMethodCheck(false);
+        $this->setAttribute('data-pjax-fragment', 'CurrentForm');
         $this->setAttribute('data-hints', $controller->TreeHints());
         $this->setAttribute('data-childfilter', $controller->Link('childfilter'));
         $this->setValidationResponseCallback(function () use ($negotiator, $controller) {
             $request = $controller->getRequest();
             if ($request->isAjax() && $negotiator) {
-                $result = $this->forTemplate();
                 return $negotiator->respond($request, [
-                    'CurrentForm' => function () use ($result) {
-                        return $result;
-                    }
+                    'CurrentForm' => function () {
+                        return $this->forTemplate();
+                    },
+                    'Content' => function () {
+                        return $this->forTemplate();
+                    },
                 ]);
             }
             return null;
@@ -196,6 +199,7 @@ class CMSMainAddForm extends Form
             FormAction::create('doCancel', _t(CMSMain::class . '.Cancel', 'Cancel'))
                 ->addExtraClass('btn-secondary')
                 ->setUseButtonTag(true)
+                ->setValidationExempt(true)
         );
         $this->extend('updateActions', $fields);
         return $actions;
