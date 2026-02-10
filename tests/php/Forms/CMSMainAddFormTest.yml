@@ -1,0 +1,8 @@
+SilverStripe\CMS\Model\SiteTree:
+  Page1:
+    Title: Test Page 1
+    URLSegment: test-page-1
+  Page2:
+    Title: Test Page 2
+    URLSegment: test-page-2
+    Parent: =>SilverStripe\CMS\Model\SiteTree.Page1
