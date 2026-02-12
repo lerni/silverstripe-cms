@@ -110,6 +110,12 @@ class CMSMainAddForm extends Form
             ['type' => mb_strtolower($singleton->i18n_singular_name())]
         );
 
+        $selectedModelClass = $controller->getDefaultModelClass();
+        $recordType = $controller->getRequest()->getVar('RecordType');
+        if ($recordType && class_exists($recordType) && is_subclass_of($recordType, $modelClass)) {
+            $selectedModelClass = $recordType;
+        }
+
         $fields = FieldList::create(
             $parentModeField = SelectionGroup::create(
                 'ParentModeField',
@@ -152,7 +158,7 @@ class CMSMainAddForm extends Form
                     ))
                 ),
                 $this->getRecordTypes($controller, $singleton),
-                $controller->getDefaultModelClass()
+                $selectedModelClass
             )
         );
 
