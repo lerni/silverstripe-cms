@@ -109,6 +109,11 @@
     &.view-controls--listview .font-icon-list {
       display: none;
     }
+
+    &.view-controls--treeview a[data-view="treeview"],
+    &.view-controls--listview a[data-view="listview"] {
+      padding: 0;
+    }
   }
 
 }
